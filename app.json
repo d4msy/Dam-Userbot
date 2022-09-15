@@ -13,7 +13,7 @@
       "required": true
     },
     "STRING_SESSION1": {
-      "description": "Dapatkan String Session Pyrogram di Grup » https://t.me/DamSupport » Lalu ketik #string",
+      "description": "Dapatkan String Session Pyrogram di Grup » https://t.me/damprivateroom » Lalu ketik #string",
       "required": true
     },
     "BOTLOG_CHATID": {

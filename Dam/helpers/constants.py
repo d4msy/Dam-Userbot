@@ -15,7 +15,7 @@ class First:
 **Hey**, __I am using__ 🎈 **Dam-Ubot** 🎈
 
 ► **Userbot Version :** `v2.0.2`
-► **Group Support :** 💌 [Dam Support](t.me/DamSupport)
+► **Group Support :** 💌 [Dam Support](t.me/damprivateroom)
 ► **Repo :** [Dam-Ubot](https://github.com/grey423/Dam-Ubot)"""
     CREATOR = 'I was created by my master <a href="https://github.com/mrismanaziz/PyroMan-Userbot">Man</a> on a rainy day.'
     MSG_ON = """
