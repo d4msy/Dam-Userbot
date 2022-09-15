@@ -7,7 +7,7 @@ from Dam.helpers.utility import split_list
 
 heading = "──「 **{0}** 」──\n"
 
-HELP_LOGO = "https://telegra.ph/file/47cbe59d71d4e2b8124a8.jpg"
+HELP_LOGO = "https://telegra.ph/file/f2d2cf18df7f2a8ab9729.jpg"
 
 
 @Client.on_message(filters.command("help", [".", "-", "^", "!", "?"]) & filters.me)
@@ -21,7 +21,7 @@ async def module_help(client: Client, message: Message):
         help_arg = message.reply_to_message.text
     elif not message.reply_to_message and len(cmd) == 1:
         all_commands = ""
-        all_commands += "Please specify which module you want help for!! \nUsage: `.help [module_name]`\n\n"
+        all_commands += "Silakan tentukan modul mana yang Anda inginkan bantuannya!\nPenggunaan -≽ `.help [module_name]`\n\n"
 
         ac = PrettyTable()
         ac.header = False
