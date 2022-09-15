@@ -28,7 +28,7 @@ async def restart_bot(_, message: Message):
     except BaseException as err:
         LOGGER(__name__).info(f"{err}")
         return
-    await msg.edit_text("✅ **Bot has restarted !**\n\n")
+    await msg.edit_text("☑️ **Bot was restarted!**\n\n")
     if HAPP is not None:
         HAPP.restart()
     else:
