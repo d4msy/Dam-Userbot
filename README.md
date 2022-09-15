@@ -8,7 +8,7 @@
 <a href="https://github.com/damsyx/blob/main/LICENSE"> <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License" /> </a>
     </p>
 
-![](https://telegra.ph/file/2b48ebf6e8db4825a7676.jpg)
+![](https://telegra.ph/file/3ed0efba4cad047af8966.jpg)
 
 ## ᴅɪsᴄʟᴀɪᴍᴇʀ :
 
@@ -20,10 +20,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan userbot ini dengan bijak
 
 ## ᴅᴇᴘʟᴏʏ :
 
-<p align="center"><a href=""> <img 
-src="https://img.shields.io/badge/Deploy%20To%20Bot%20Heroku-blue?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
-
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/damsyx/Dam-Ubot/tree/main"> <img 
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/damsyx/Dam-Userbot/tree/main"> <img 
 src="https://img.shields.io/badge/Deploy%20To%20Heroku-purple?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
 
 <p align="center"><a href="https://t.me/ZetsuStringBot"><img src="https://img.shields.io/badge/Generate%20String%20Session-blue?style=for-the-flat&logo=telegram" width="210" height"34.45" /</a></p>
