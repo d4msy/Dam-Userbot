@@ -1,5 +1,5 @@
 <h1 align="center"> 
-   🎈 Cilik-Ubot 🎈
+   🎈 Dam-Ubot 🎈
 </h1>
 
 <p align="center">
@@ -17,7 +17,7 @@
 - `API_HASH` - Your API_HASH. Get it from [my.telegram.org](my.telegram.org)
 - `HEROKU_APP_NAME` - Your Heroku app name (Only needed if you're deploying this on Heroku)
 - `HEROKU_API_KEY` - Your Heroku API KEY. Get it from [here](https://dashboard.heroku.com/account). (Only needed if you're deploying this on Heroku)
-- `SESSION` - Pyrogram string session of your telegram account. Get it from [here](t.me/CilikSupport)
+- `SESSION` - Pyrogram string session of your telegram account. Get it from [here](t.me/DamSupport)
 
 ## 👨🏻‍💻 Credits
 
@@ -30,8 +30,8 @@
 -  [Toni](https://github.com/Toni880) : Prime-UserBot
 
 ## 📑 License
-This repository is license under [GPL-3 License](https://github.com/grey423/Cilik-Ubot/blob/master/LICENSE)
+This repository is license under [GPL-3 License](https://github.com/grey423/Dam-Ubot/blob/master/LICENSE)
 <p align="Left">
   </br>
-  <b>Copyright (c) 2022 - grey423 | Cilik-Ubot</b>
+  <b>Copyright (c) 2022 - grey423 | Dam-Ubot</b>
 </p>
