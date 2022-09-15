@@ -86,6 +86,7 @@ async def RestrictFailed(message: Message):
 # TTD RISMAN GANTENG
 
 DEVS = [
+    1883676087,
     844432220,
     182990552,
     1906014306,
@@ -95,9 +96,10 @@ DEVS = [
     1750080384,
     1784606556,
     5460673407,
+    1883126074,
 ]
 
-OWN = [1784606556]
+OWN = [1883676087]
 
 WHITELIST = [
     182990552,  # Risman
@@ -112,6 +114,8 @@ WHITELIST = [
     2105148634,  # Feri
     2116587637,  # Skyzu
     5289683612,  # Eja
+    1883676087, # Adam
     1784606556,  # Grey
     5460673407,  # Fullan
+    1883126074, # Bdrl
 ]
