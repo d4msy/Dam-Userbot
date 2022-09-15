@@ -66,7 +66,7 @@ async def pingme(client: Client, message: Message):
     mulai = time.time()
     grey = await message.reply_text("...")
     akhir = time.time()
-    await grey.edit_text(f"**🏓 Pong!**\n`{round((akhir - mulai) * 1000,3)}ms`")
+    await grey.edit_text(f"**Pong!**\n`{round((akhir - mulai) * 1000,3)}ms`")
 
 
 @Client.on_message(filters.command("expand", [".", "!", "-", "^", "?"]) & filters.me)
