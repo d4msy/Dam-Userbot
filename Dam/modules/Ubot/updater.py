@@ -9,6 +9,7 @@ from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
+from config import BRANCH, GIT_TOKEN, HEROKU_API_KEY, HEROKU_APP_NAME
 from Dam.helpers.adminHelpers import DEVS
 from Dam.helpers.basic import edit_or_reply
 from Dam.helpers.misc import HAPP, XCB
@@ -16,7 +17,6 @@ from Dam.helpers.tools import get_arg
 from Dam.utils.misc import restart
 from Dam.utils.pastebin import PasteBin
 from Dam.utils.tools import bash
-from config import BRANCH, GIT_TOKEN, HEROKU_API_KEY, HEROKU_APP_NAME
 
 from .help import add_command_help
 
@@ -157,9 +157,7 @@ async def upstream(client: Client, message: Message):
             )
             repo.__del__()
             return
-        await status.edit(
-            "`[HEROKU]: ⏳ Update Deploy Dam-Ubot Sedang Dalam Proses...`"
-        )
+        await status.edit("`[HEROKU]: ⏳ Update Deploy Dam-Ubot Sedang Dalam Proses...`")
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
         heroku_git_url = heroku_app.git_url.replace(

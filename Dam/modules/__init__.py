@@ -1,12 +1,12 @@
 import glob
 from os.path import basename, dirname, isfile
 
+from config import *
 from Dam import *
 from Dam.helpers import *
 from Dam.helpers.SQL import *
 from Dam.resources import *
 from Dam.utils import *
-from config import *
 
 
 def __list_all_modules():

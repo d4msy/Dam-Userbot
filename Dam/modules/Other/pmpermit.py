@@ -12,10 +12,10 @@ from pyrogram import Client, enums, filters
 from pyrogram.types import Message
 from sqlalchemy.exc import IntegrityError
 
+from config import PM_AUTO_BAN
 from Dam import TEMP_SETTINGS
 from Dam.helpers.adminHelpers import DEVS
 from Dam.modules.Ubot.help import add_command_help
-from config import PM_AUTO_BAN
 
 DEF_UNAPPROVED_MSG = (
     "╔════════════════════╗\n"

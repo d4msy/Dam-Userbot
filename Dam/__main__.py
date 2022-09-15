@@ -11,9 +11,9 @@
 from pyrogram import idle
 from uvloop import install
 
+from config import BOT_VER
 from Dam import BOTLOG_CHATID, LOGGER, LOOP, aiosession, bot1, bots
 from Dam.helpers.misc import create_botlog, git, heroku
-from config import BOT_VER
 
 MSG_ON = """
 ✅ **Dam-Ubot Activated.**

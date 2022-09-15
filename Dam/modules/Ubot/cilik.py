@@ -7,11 +7,11 @@ import speedtest
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
+from config import *
 from Dam.helpers.constants import WWW
 from Dam.helpers.expand import expand_url
 from Dam.helpers.PyroHelpers import SpeedConvert
 from Dam.helpers.shorten import shorten_url
-from config import *
 
 from .help import add_command_help
 

@@ -13,12 +13,12 @@ import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
+from config import BLACKLIST_CHAT
 from Dam.helpers.adminHelpers import DEVS
 from Dam.helpers.basic import edit_or_reply
 from Dam.helpers.PyroHelpers import ReplyCheck
 from Dam.modules.Ubot.help import add_command_help
 from Dam.utils import extract_user
-from config import BLACKLIST_CHAT
 
 
 @Client.on_message(filters.command("jamet", [".", "-", "^", "!", "?"]) & filters.me)

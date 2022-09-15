@@ -8,10 +8,10 @@ from pyrogram import Client, enums, filters
 from pyrogram.types import Message
 from requests import get
 
+from config import BLACKLIST_GCAST, HEROKU_API_KEY, HEROKU_APP_NAME
 from Dam.helpers.adminHelpers import DEVS
 from Dam.helpers.tools import get_arg
 from Dam.modules.Ubot.help import add_command_help
-from config import BLACKLIST_GCAST, HEROKU_API_KEY, HEROKU_APP_NAME
 
 while 0 < 6:
     _GCAST_BLACKLIST = get(

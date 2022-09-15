@@ -17,8 +17,8 @@ import heroku3
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError
 
-from Dam import LOGGER
 from config import BRANCH, GIT_TOKEN, HEROKU_API_KEY, HEROKU_APP_NAME
+from Dam import LOGGER
 
 HAPP = None
 

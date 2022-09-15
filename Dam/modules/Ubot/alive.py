@@ -19,6 +19,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 from telegraph import exceptions, upload_file
 
+from config import BOT_VER, GROUP
 from Dam import CMD_HELP, StartTime
 from Dam.helpers.basic import edit_or_reply
 from Dam.helpers.PyroHelpers import ReplyCheck
@@ -26,7 +27,6 @@ from Dam.helpers.SQL.globals import gvarstatus
 from Dam.helpers.tools import convert_to_image
 from Dam.utils import get_readable_time
 from Dam.utils.misc import restart
-from config import BOT_VER, GROUP
 
 from .help import add_command_help
 

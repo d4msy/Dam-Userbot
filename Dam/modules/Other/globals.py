@@ -52,7 +52,9 @@ async def gban_user(client: Client, message: Message):
     if user_id in DEVS:
         return await Dam.edit("**Gagal GBAN karena dia adalah Pembuat saya 🗿**")
     if user_id in WHITELIST:
-        return await Man.edit("**Gagal GBAN karena dia adalah admin @damprivateroom 🗿**")
+        return await Man.edit(
+            "**Gagal GBAN karena dia adalah admin @damprivateroom 🗿**"
+        )
     if user_id:
         try:
             user = await client.get_users(user_id)
@@ -169,7 +171,9 @@ async def gmute_user(client: Client, message: Message):
     if user.id in DEVS:
         return await Man.edit("**Gagal GMUTE karena dia adalah Pembuat saya 🗿**")
     if user.id in WHITELIST:
-        return await Man.edit("**Gagal GMUTE karena dia adalah admin @damprivateroom 🗿**")
+        return await Man.edit(
+            "**Gagal GMUTE karena dia adalah admin @damprivateroom 🗿**"
+        )
     try:
         replied_user = reply.from_user
         if replied_user.is_self:
@@ -181,9 +185,7 @@ async def gmute_user(client: Client, message: Message):
         if sql2.is_gmuted(user.id):
             return await Dam.edit("`User already gmuted`")
         sql2.gmute(user.id)
-        await Dam.edit(
-            f"[{user.first_name}](tg://user?id={user.id}) globally gmuted!"
-        )
+        await Dam.edit(f"[{user.first_name}](tg://user?id={user.id}) globally gmuted!")
         try:
             common_chats = await client.get_common_chats(user.id)
             for i in common_chats:

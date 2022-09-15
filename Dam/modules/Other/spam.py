@@ -6,10 +6,10 @@ from threading import Event
 from pyrogram import Client, enums, filters
 from pyrogram.types import Message
 
+from config import BLACKLIST_CHAT, BOTLOG_CHATID
 from Dam.helpers.basic import edit_or_reply
 from Dam.modules.Ubot.help import *
 from Dam.utils.misc import extract_args
-from config import BLACKLIST_CHAT, BOTLOG_CHATID
 
 commands = ["spam", "statspam", "slowspam", "fastspam"]
 SPAM_COUNT = [0]
