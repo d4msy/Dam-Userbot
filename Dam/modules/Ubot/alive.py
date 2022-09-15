@@ -39,7 +39,7 @@ alive_text = gvarstatus("ALIVE_TEKS_CUSTOM") or "Hey, I am alive."
 
 
 @Client.on_message(
-    filters.command(["alive", "Dam"], [".", "-", "^", "!", "?"]) & filters.me
+    filters.command(["alive", "dam"], [".", "-", "^", "!", "?"]) & filters.me
 )
 async def alive(client: Client, message: Message):
     xx = await edit_or_reply(message, "⚡")
@@ -47,15 +47,15 @@ async def alive(client: Client, message: Message):
     send = client.send_video if alive_logo.endswith(".mp4") else client.send_photo
     uptime = await get_readable_time((time.time() - StartTime))
     man = (
-        f"**⚡ [𝗖𝗶𝗹𝗶𝗸-𝗨𝗯𝗼𝘁](https://github.com/grey/Dam-Ubot) Alive ⚡**\n\n"
+        f"**⚡ [Dᴀᴍ-Usᴇʀʙᴏᴛ](https://github.com/damsyx/Dam-Ubot) Alive ⚡**\n\n"
         f"<b>{alive_text}</b>\n\n"
-        f"{emoji} <b>Master :</b> {client.me.mention} \n"
-        f"{emoji} <b>Modules :</b> <code>{len(modules)} Modules</code> \n"
-        f"{emoji} <b>Dam Version :</b> <code>{BOT_VER}</code> \n"
-        f"{emoji} <b>Python Version :</b> <code>{python_version()}</code> \n"
-        f"{emoji} <b>Pyrogram Version :</b> <code>{versipyro}</code> \n"
-        f"{emoji} <b>Bot Uptime :</b> <code>{uptime}</code> \n"
-        f"{emoji} <b>Support :</b> [Dam](https://t.me/{GROUP})"
+        f"{emoji} <b>Oᴡɴᴇʀ -≽ </b> {client.me.mention} \n"
+        f"{emoji} <b>Mᴏᴅᴜʟᴇs -≽ </b> <code>{len(modules)} Modules</code> \n"
+        f"{emoji} <b>Dᴀᴍ Vᴇʀsɪᴏɴ  -≽ </b> <code>{BOT_VER}</code> \n"
+        f"{emoji} <b>Pʏᴛʜᴏɴ Vᴇʀsɪᴏɴ  -≽ </b> <code>{python_version()}</code> \n"
+        f"{emoji} <b>Pʏʀᴏɢʀᴀᴍ Vᴇʀsɪᴏɴ  -≽ </b> <code>{versipyro}</code> \n"
+        f"{emoji} <b>Bᴏᴛ Uᴘᴛɪᴍᴇ -≽ </b> <code>{uptime}</code> \n"
+        f"{emoji} <b>Gʀᴏᴜᴘ Sᴜᴘᴘᴏʀᴛ  -≽ </b> [Dᴀᴍ-Sᴜᴘᴘᴏʀᴛ](https://t.me/{GROUP})"
     )
     try:
         await asyncio.gather(
@@ -166,7 +166,7 @@ add_command_help(
     "alive",
     [
         [
-            ".alive or .Dam",
+            ".alive or .dam",
             "Untuk memeriksa userbot anda berfungsi atau tidak",
         ],
         [
