@@ -20,7 +20,7 @@ from Dam.utils.tools import bash
 
 from .help import add_command_help
 
-REPO_URL = "https://github.com/hidagans/Dam-Ubot"
+REPO_URL = "https://github.com/damsyx/Dam-Userbot"
 
 if GIT_TOKEN:
     GIT_USERNAME = REPO_URL.split("com/")[1].split("/")[0]
@@ -173,7 +173,7 @@ async def upstream(client: Client, message: Message):
         except GitCommandError:
             pass
         await status.edit(
-            "✅ `Dam-Ubot Updated Successfully! Userbot can be used again.`"
+            "☑️ `Dam-Ubot Updated Successfully! Userbot can be used again.`"
         )
     else:
         try:
@@ -182,7 +182,7 @@ async def upstream(client: Client, message: Message):
             repo.git.reset("--hard", "FETCH_HEAD")
         await updateme_requirements()
         await status.edit(
-            "✅ `Dam-Ubot Updated Successfully! Userbot can be used again.`",
+            "☑️ `Dam-Ubot Updated Successfully! Userbot can be used again.`",
         )
         args = [sys.executable, "-m", "Dam"]
         execle(sys.executable, *args, environ)
