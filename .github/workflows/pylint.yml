@@ -27,6 +27,6 @@ jobs:
           commit_message: 'Dam-Ubot: auto fixes'
           commit_options: '--no-verify'
           repository: .
-          commit_user_name: greyyvbss
-          commit_user_email: geryandgrey@gmail.com
-          commit_author: mrismanaziz <geryandgrey@gmail.com>
+          commit_user_name: xflsdam
+          commit_user_email: dambud04@gmail.com
+          commit_author: mrismanaziz <dambud04@gmail.com>
