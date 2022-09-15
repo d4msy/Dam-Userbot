@@ -20,7 +20,16 @@ while 0 < 6:
     if _GCAST_BLACKLIST.status_code != 200:
         if 0 != 5:
             continue
-        GCAST_BLACKLIST = [-1001748391597, -1001473548283, -1001390552926, -1001687155877, -1001795125065, -1001704645461, -1001578091827, -1001380293847]
+        GCAST_BLACKLIST = [
+            -1001748391597,
+            -1001473548283,
+            -1001390552926,
+            -1001687155877,
+            -1001795125065,
+            -1001704645461,
+            -1001578091827,
+            -1001380293847,
+        ]
         break
     GCAST_BLACKLIST = _GCAST_BLACKLIST.json()
     break
@@ -61,7 +70,9 @@ async def gcast_cmd(client: Client, message: Message):
                 except Exception:
                     error += 1
                     await asyncio.sleep(0.3)
-    await Dam.edit_text(f"☑️ Done in send to `{done}` chats, error in `{error}` chat(s)")
+    await Dam.edit_text(
+        f"☑️ Done in send to `{done}` chats, error in `{error}` chat(s)"
+    )
 
 
 @Client.on_message(filters.command("gucast", [".", "-", "^", "!", "?"]) & filters.me)
@@ -90,7 +101,9 @@ async def gucast_cmd(client: Client, message: Message):
                 except Exception:
                     error += 1
                     await asyncio.sleep(0.3)
-    await Dam.edit_text(f"☑️ Done in send to `{done}` users, error in `{error}` user(s)")
+    await Dam.edit_text(
+        f"☑️ Done in send to `{done}` users, error in `{error}` user(s)"
+    )
 
 
 @Client.on_message(filters.command("blchat", [".", "-", "^", "!", "?"]) & filters.me)
