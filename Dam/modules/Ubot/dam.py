@@ -133,7 +133,7 @@ add_command_help(
         [".ping", "Ping Bot."],
         [".dc", "Dapatkan Telegram DC Anda."],
         [
-            ".Dam or .alive",
+            ".dam or .alive",
             "Perintah ini untuk memeriksa userbot anda berfungsi atau tidak.",
         ],
         [
