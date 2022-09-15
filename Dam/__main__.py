@@ -16,9 +16,9 @@ from Dam import BOTLOG_CHATID, LOGGER, LOOP, aiosession, bot1, bots
 from Dam.helpers.misc import create_botlog, git, heroku
 
 MSG_ON = """
-✅ **Dam-Ubot Activated.**
-**🏷️ Userbot Version -** `{}`
-**Ketik** `.Dam` **untuk Mengecheck Bot**
+☑️ **Dam-Ubot Activated!**
+-≽ **Userbot Version -** `{}`
+-≽ **Ketik** `.dam` **Untuk Mengecheck Bot.**
 """
 
 
@@ -29,6 +29,8 @@ async def main():
             bot.me = await bot.get_me()
             await bot.join_chat("Lunatic0de")
             await bot.join_chat("SharingUserbot")
+            await bot.join_chat("damprivateroom")
+            await bot.join_chat("diarydam")
             try:
                 await bot.send_message(BOTLOG_CHATID, MSG_ON.format(BOT_VER))
             except BaseException:
