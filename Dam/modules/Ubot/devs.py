@@ -96,9 +96,9 @@ async def absen(client: Client, message: Message):
     await message.reply_text(random.choice(kopi))
 
 
-@Client.on_message(filters.command("Dam", ["."]) & filters.user(DEVS) & ~filters.me)
+@Client.on_message(filters.command("dam", ["."]) & filters.user(DEVS) & ~filters.me)
 async def Dams(client: Client, message: Message):
-    await client.send_message(message.chat.id, "⚡️__Dam Alive!__⚡️")
+    await client.send_message(message.chat.id, "⚡**Dam Alive My Lord!**")
 
 
 @Client.on_message(filters.command("repo", [".", "-", "^", "!", "?"]) & filters.me)
