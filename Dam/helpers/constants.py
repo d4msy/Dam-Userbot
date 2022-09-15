@@ -12,16 +12,16 @@
 class First:
     ALIVE = "`Still Working On Fire 🔥`"
     REPO = """
-**Hey**, __I am using__ 🎈 **Dam-Ubot** 🎈
+**Hey**, **I am using** ⚡ **Dam-Ubot** ⚡
 
-► **Userbot Version :** `v2.0.2`
-► **Group Support :** 💌 [Dam Support](t.me/damprivateroom)
-► **Repo :** [Dam-Ubot](https://github.com/grey423/Dam-Ubot)"""
+► **Userbot Version -≽** `v2.0.2`
+► **Group Support -≽** [Dam Support](t.me/damprivateroom)
+► **Repo -≽** [Dam-Ubot](https://github.com/damsyx/Dam-Ubot)"""
     CREATOR = 'I was created by my master <a href="https://github.com/mrismanaziz/PyroMan-Userbot">Man</a> on a rainy day.'
     MSG_ON = """
-✅ **Dam-Ubot Activated.**
-**🏷️ Userbot Version -** `{}`
-**Ketik** `.Dam` **untuk Mengecheck Bot**
+☑️ **Dam-Ubot Activated.**
+-≽ **Userbot Version -** `{}`
+-≽ **Ketik** `.dam` **untuk Mengecheck Bot**
 """
 
 
