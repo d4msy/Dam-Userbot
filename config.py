@@ -25,7 +25,7 @@ BLACKLIST_GCAST = {int(x) for x in getenv("BLACKLIST_GCAST", "").split()}
 BOTLOG_CHATID = int(getenv("BOTLOG_CHATID") or 0)
 BOT_VER = "0.2.0@main"
 BRANCH = "main"
-CHANNEL = getenv("CHANNEL", "DamProject")
+CHANNEL = getenv("CHANNEL", "diarydam")
 DB_URL = getenv("DATABASE_URL", "")
 GIT_TOKEN = getenv(
     "GIT_TOKEN",
