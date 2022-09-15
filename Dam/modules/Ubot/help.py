@@ -25,17 +25,17 @@ async def module_help(client: Client, message: Message):
 
         ac = PrettyTable()
         ac.header = False
-        ac.title = "Dᴀᴍ-Mᴏᴅᴜʟᴇs"
+        ac.title = "𝗗𝗮𝗺-𝗠𝗼𝗱𝘂𝗹𝗲𝘀"
         ac.align = "l"
 
         for x in split_list(sorted(CMD_HELP.keys()), 2):
             ac.add_row([x[0], x[1] if len(x) >= 2 else None])
 
-        text = "🗂️ Dᴀᴍ-Mᴏᴅᴜʟᴇs \n\n"
-        text += "🔮 𝗨𝗯𝗼𝘁: -⋟ `dam` -⋟ `alive` -⋟ `heroku` -⋟ `system` -⋟ `update` \n\n"
+        text = "🗂️ 𝗗𝗮𝗺-𝗠𝗼𝗱𝘂𝗹𝗲𝘀 \n\n"
+        text += "🤖 𝗨𝗯𝗼𝘁: -⋟ `dam` -⋟ `alive` -⋟ `heroku` -⋟ `system` -⋟ `update` \n\n"
         text += "⚙️ 𝗧𝗼𝗼𝗹𝘀: -⋟ `create` -⋟ `converter` -⋟ `gcast` -⋟ `info` -⋟ `invite` -⋟ `locks` -⋟ `profile` -⋟ `parse` -⋟ `paste` -⋟ `purge` -⋟ `sangmata` -⋟ `translate` -⋟ `vctools` \n\n"
         text += (
-            "🎈 𝗙𝘂𝗻: -⋟ `asupan` -⋟ `animasi` -⋟ `fakeaction` -⋟ `salam` -⋟ `toxic` \n\n"
+            "✨ 𝗙𝘂𝗻: -⋟ `asupan` -⋟ `animasi` -⋟ `fakeaction` -⋟ `salam` -⋟ `toxic` \n\n"
         )
         text += "🧰 𝗢𝘁𝗵𝗲𝗿: -⋟ `admins` -⋟ `afk` -⋟ `globals` -⋟ `groups` -⋟ `google` -⋟ `join` -⋟ `logs` -⋟ `misc` -⋟ `nulis` -⋟ `spam` -⋟ `sticker` -⋟ `sosmed` -⋟ `pmpermit` -⋟ `youtube` \n\n\n"
         text += "📮 𝗣𝗿𝗲𝗳𝗶𝘅 -⋟ `[. - ^ ! ?]`\n"
