@@ -62,7 +62,7 @@ async def purge(client: Client, message: Message):
             return
 
     done = await Man.edit(
-        f"**Fast Purge Completed!**\n**Berhasil Menghapus** `{str(count)}` **Pesan.**"
+        f"**Fast Purge Complete!**\n**Delete Successfully** `{str(count)}` **Messages.**"
     )
     await asyncio.sleep(2)
     await done.delete()
@@ -77,7 +77,7 @@ async def purgeme(client: Client, message: Message):
         return await message.delete()
     n = message.text.split(None, 1)[1].strip()
     if not n.isnumeric():
-        return await edit_or_reply(message, "Harap masukan angka")
+        return await edit_or_reply(message, "Harap masukan angka!")
     n = int(n)
     if n < 1:
         return await edit_or_reply(message, "Masukan jumlah pesan yang ingin dihapus!")
