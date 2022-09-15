@@ -25,14 +25,14 @@ async def module_help(client: Client, message: Message):
 
         ac = PrettyTable()
         ac.header = False
-        ac.title = "𝗖𝗶𝗹𝗶𝗸 𝗠𝗼𝗱𝘂𝗹𝗲𝘀"
+        ac.title = "Dᴀᴍ-Mᴏᴅᴜʟᴇs"
         ac.align = "l"
 
         for x in split_list(sorted(CMD_HELP.keys()), 2):
             ac.add_row([x[0], x[1] if len(x) >= 2 else None])
 
-        text = "𝗖𝗶𝗹𝗶𝗸 𝗠𝗼𝗱𝘂𝗹𝗲𝘀 \n\n"
-        text += "🔮 𝗨𝗯𝗼𝘁: -⋟ `Dam` -⋟ `alive` -⋟ `heroku` -⋟ `system` -⋟ `update` \n\n"
+        text = "🗂️ Dᴀᴍ-Mᴏᴅᴜʟᴇs \n\n"
+        text += "🔮 𝗨𝗯𝗼𝘁: -⋟ `dam` -⋟ `alive` -⋟ `heroku` -⋟ `system` -⋟ `update` \n\n"
         text += "⚙️ 𝗧𝗼𝗼𝗹𝘀: -⋟ `create` -⋟ `converter` -⋟ `gcast` -⋟ `info` -⋟ `invite` -⋟ `locks` -⋟ `profile` -⋟ `parse` -⋟ `paste` -⋟ `purge` -⋟ `sangmata` -⋟ `translate` -⋟ `vctools` \n\n"
         text += (
             "🎈 𝗙𝘂𝗻: -⋟ `asupan` -⋟ `animasi` -⋟ `fakeaction` -⋟ `salam` -⋟ `toxic` \n\n"
