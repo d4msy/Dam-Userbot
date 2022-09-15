@@ -1,37 +1,56 @@
-<h1 align="center"> 
-   🎈 Dam-Ubot 🎈
-</h1>
+
+<h3 align="center">✘ Pʏʀᴏ-Dᴀᴍ Uꜱᴇʀʙᴏᴛ ✘<h3 align="center">
 
 <p align="center">
-  <a href="#"><img src="https://telegra.ph/file/d20fc177ac0cb0136d942.jpg" width="300" height="300"></a> </br>
+<a href="https://t.me/xflsdam"> <img src="https://img.shields.io/badge/Dam-Devs-blue?&logo=telegram" alt="Dam on Telegram" /> </a><br>
+<a href="https://docs.pyrogram.dev"> <img src="https://img.shields.io/badge/Pyrogram-2.0.51-red?&style=flat-round&logo=github" alt="Pyrogram" /> </a><br>
+<a href="https://docs.python.org"> <img src="https://img.shields.io/badge/Python-3.9.6-purple?&style=flat-round&logo=python" alt="Python" /> </a><br>
+<a href="https://github.com/damsyx/blob/main/LICENSE"> <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License" /> </a>
+    </p>
+
+![](https://telegra.ph/file/2b48ebf6e8db4825a7676.jpg)
+
+## ᴅɪsᴄʟᴀɪᴍᴇʀ :
+
+Saya tidak bertanggung jawab atas penyalahgunaan bot ini.
+Bot ini dimaksudkan untuk bersenang-senang sekaligus membantu anda
+mengelola grup secara efisien dan mengotomatiskan beberapa hal yang membosankan.
+Gunakan bot ini dengan risiko Anda sendiri, dan gunakan userbot ini dengan bijak.
+    
+
+## ᴅᴇᴘʟᴏʏ :
+
+<p align="center"><a href=""> <img 
+src="https://img.shields.io/badge/Deploy%20To%20Bot%20Heroku-blue?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
+
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/damsyx/Dam-Ubot/tree/main"> <img 
+src="https://img.shields.io/badge/Deploy%20To%20Heroku-purple?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
+
+<p align="center"><a href="https://t.me/ZetsuStringBot"><img src="https://img.shields.io/badge/Generate%20String%20Session-blue?style=for-the-flat&logo=telegram" width="210" height"34.45" /</a></p>
+
+
+## sᴜᴘᴘᴏʀᴛ & ᴜᴘᴅᴀᴛᴇs :
+<p>
+<a href="https://t.me/xflsdam"> <img src="https://img.shields.io/badge/Dam-blue?&logo=telegram" alt="Dam on Telegram" /> </a><br>
+<a href="https://t.me/damprivateroom"> <img src="https://img.shields.io/badge/Support-Chat-blue?&logo=telegram" alt="Support Chat" /> </a><br>
+<a href="https://t.me/diarydam"> <img src="https://img.shields.io/badge/Update-Channel-blue?&logo=telegram" alt="Update Channel" /> </a><br>
+
+## ᴀʙᴏᴜᴛ ᴍᴇ :
+<p align="left">
+<a href="https://github.com/damsyx"><img src="https://img.shields.io/badge/GitHub-Follow%20GitHub-inactive.svg?style=for-the-badge&logo=github"></a>
 </p>
+<p align="left">
+<a href="https://instagram.com/dambud_"><img src="https://img.shields.io/badge/Instagram-Follow-important.svg?style=for-the-badge&logo=instagram"></a>
 
-## Deploy With Heroku 💌
+## ᴏʀɪɢɪɴᴀʟ ʀᴇᴘᴏ & sᴘᴇᴄɪᴀʟ ᴛʜᴀɴᴋs :
 
-<h3 align="center">Klik Tombol di Bawah ini untuk Deploy di Heroku</h3>
-<p align="center"><a href="https://risman.vercel.app/deploy-pyro.html"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy to Heroku" target="_blank"/></a></p>
-
-## Config Vars 📑,
-
-- `APP_ID` - Your APP ID. Get it from [my.telegram.org](my.telegram.org)
-- `API_HASH` - Your API_HASH. Get it from [my.telegram.org](my.telegram.org)
-- `HEROKU_APP_NAME` - Your Heroku app name (Only needed if you're deploying this on Heroku)
-- `HEROKU_API_KEY` - Your Heroku API KEY. Get it from [here](https://dashboard.heroku.com/account). (Only needed if you're deploying this on Heroku)
-- `SESSION` - Pyrogram string session of your telegram account. Get it from [here](t.me/damprivateroom)
-
-## 👨🏻‍💻 Credits
-
--  [PyroMan](https://github.com/mrismanaziz/PyroMan-Userbot) : PyroMan-Userbot
+#### Special Thanks To [Everyone](https://github.com/damsyx/PyroDam/graphs/contributors) Who Has Helped Make This Userbot Awesome!
 -  [TeamDerUntergang](https://github.com/TeamDerUntergang/Telegram-SedenUserBot) : SedenUserBot
 -  [TheHamkerCat](https://github.com/TheHamkerCat/WilliamButcherBot) : WilliamButcherBot
 -  [TeamYukki](https://github.com/TeamYukki/YukkiMusicBot) : YukkiMusicBot
 -  [ITZ-ZAID](https://github.com/ITZ-ZAID) : Zaid-UserBot
+-  [Dam](https://github.com/damsyx) : PyroDam-Userbot 
+-  [Risman](https://github.com/mrismanaziz) : PyroMan-Userbot
 -  [Tofikdn](https://github.com/tofikdn) : Tede
 -  [Toni](https://github.com/Toni880) : Prime-UserBot
-
-## 📑 License
-This repository is license under [GPL-3 License](https://github.com/grey423/Dam-Ubot/blob/master/LICENSE)
-<p align="Left">
-  </br>
-  <b>Copyright (c) 2022 - grey423 | Dam-Ubot</b>
-</p>
+-  [Grey](https://github.com/grey423) : Cilik-Ubot
