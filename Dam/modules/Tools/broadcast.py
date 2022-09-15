@@ -49,7 +49,7 @@ async def gcast_cmd(client: Client, message: Message):
     if message.reply_to_message or get_arg(message):
         Dam = await message.reply("`Global Broadcasting!`")
     else:
-        return await message.edit_text("**Berikan Sebuah Pesan atau Reply**")
+        return await message.edit_text("**Berikan Sebuah Text atau Reply Pesan**")
     done = 0
     error = 0
     async for dialog in client.get_dialogs():
@@ -71,7 +71,7 @@ async def gcast_cmd(client: Client, message: Message):
                     error += 1
                     await asyncio.sleep(0.3)
     await Dam.edit_text(
-        f"☑️ Done in send to `{done}` chats, error in `{error}` chat(s)"
+        f"☑️ Selesai Dikirm Ke `{done}` Obrolan, Gagal Dalam `{error}` Obrolan"
     )
 
 
@@ -80,7 +80,7 @@ async def gucast_cmd(client: Client, message: Message):
     if message.reply_to_message or get_arg(message):
         Dam = await message.reply("`Global Broadcasting!`")
     else:
-        return await message.edit_text("**Berikan Sebuah Pesan atau Reply**")
+        return await message.edit_text("**Berikan Sebuah Text atau Reply Pesan**")
     done = 0
     error = 0
     async for dialog in client.get_dialogs():
@@ -102,7 +102,7 @@ async def gucast_cmd(client: Client, message: Message):
                     error += 1
                     await asyncio.sleep(0.3)
     await Dam.edit_text(
-        f"☑️ Done in send to `{done}` users, error in `{error}` user(s)"
+        f"☑️ Selesai Dikirim Ke `{done}` Pengguna, Gagal Dalam `{error}` Pengguna"
     )
 
 
