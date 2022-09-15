@@ -59,7 +59,7 @@ def install_req(cmd: str) -> Tuple[str, str, int, int]:
     return asyncio.get_event_loop().run_until_complete(install_requirements())
 
 
-CBHDSYS = "https://github.com/hidagans/Dam-Ubot"
+CBHDSYS = "https://github.com/damsyx/Dam-Userbot"
 
 
 def git():
@@ -129,7 +129,7 @@ async def create_botlog(client):
     if HAPP is None:
         return
     LOGGER("Dam").info("TUNGGU SEBENTAR. SEDANG MEMBUAT GROUP LOG USERBOT UNTUK ANDA")
-    desc = "Group Log untuk Dam-Ubot.\n\nHARAP JANGAN KELUAR DARI GROUP INI.\n\n⚡ Powered By ~ @DamProject ⚡"
+    desc = "Group Log untuk Dam-Ubot.\n\nHARAP JANGAN KELUAR DARI GROUP INI.\n\n⚡ Powered By ~ @damprivateroom ⚡"
     try:
         gruplog = await client.create_supergroup("⚡ Dam-Logs ⚡", desc)
         if await in_heroku():
