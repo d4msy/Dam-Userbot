@@ -1,7 +1,7 @@
 # Dam-PyroBot
 
 from .alive import *
-from .Dam import *
+from .dam import *
 from .help import *
 from .heroku import *
 from .system import *
