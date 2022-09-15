@@ -64,9 +64,9 @@ async def nearest_dc(client: Client, message: Message):
 async def pingme(client: Client, message: Message):
     """Ping the assistant"""
     mulai = time.time()
-    grey = await message.reply_text("...")
+    dam = await message.reply_text("...")
     akhir = time.time()
-    await grey.edit_text(f"**Pong!**\n`{round((akhir - mulai) * 1000,3)}ms`")
+    await dam.edit_text(f"**Pong!**\n`{round((akhir - mulai) * 1000,3)}ms`")
 
 
 @Client.on_message(filters.command("expand", [".", "!", "-", "^", "?"]) & filters.me)
