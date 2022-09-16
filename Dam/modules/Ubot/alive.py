@@ -47,15 +47,15 @@ async def alive(client: Client, message: Message):
     send = client.send_video if alive_logo.endswith(".mp4") else client.send_photo
     uptime = await get_readable_time((time.time() - StartTime))
     man = (
-        f"**[Dᴀᴍ-Usᴇʀʙᴏᴛ](https://github.com/damsyx/Dam-Ubot) is Up And Running!**\n\n"
+        f"**[PyroDam-Userbot](https://github.com/damsyx/Dam-Ubot) is Up And Running!**\n\n"
         f"<b>{alive_text}</b>\n\n"
-        f"{emoji} <b>Oᴡɴᴇʀ -≽</b> {client.me.mention} \n"
-        f"{emoji} <b>Mᴏᴅᴜʟᴇs -≽</b> <code>{len(modules)} Modules</code> \n"
-        f"{emoji} <b>Dᴀᴍ Vᴇʀsɪᴏɴ -≽</b> <code>{BOT_VER}</code> \n"
-        f"{emoji} <b>Pʏᴛʜᴏɴ Vᴇʀsɪᴏɴ -≽</b> <code>{python_version()}</code> \n"
-        f"{emoji} <b>Pʏʀᴏɢʀᴀᴍ Vᴇʀsɪᴏɴ -≽</b> <code>{versipyro}</code> \n"
-        f"{emoji} <b>Bᴏᴛ Uᴘᴛɪᴍᴇ -≽</b> <code>{uptime}</code> \n"
-        f"{emoji} <b>Gʀᴏᴜᴘ Sᴜᴘᴘᴏʀᴛ -≽</b> [Dᴀᴍ-Sᴜᴘᴘᴏʀᴛ](https://t.me/{GROUP})"
+        f"{emoji} <b>**Owner** -≽</b> {client.me.mention} \n"
+        f"{emoji} <b>**Modules** -≽</b> <code>{len(modules)} Modules</code> \n"
+        f"{emoji} <b>**Dam Version** -≽</b> <code>{BOT_VER}</code> \n"
+        f"{emoji} <b>**Python Version** -≽</b> <code>{python_version()}</code> \n"
+        f"{emoji} <b>**Pyrogram Version** -≽</b> <code>{versipyro}</code> \n"
+        f"{emoji} <b>**Bot Uptime** -≽</b> <code>{uptime}</code> \n"
+        f"{emoji} <b>**Group Support** -≽</b> [Dam-Support](https://t.me/{GROUP})"
     )
     try:
         await asyncio.gather(
