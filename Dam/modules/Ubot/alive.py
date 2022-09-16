@@ -34,28 +34,28 @@ modules = CMD_HELP
 alive_logo = (
     gvarstatus("ALIVE_LOGO") or "https://telegra.ph/file/3ed0efba4cad047af8966.jpg"
 )
-emoji = gvarstatus("ALIVE_EMOJI") or "⚡"
-alive_text = gvarstatus("ALIVE_TEKS_CUSTOM") or "Hey, I am alive."
+emoji = gvarstatus("ALIVE_EMOJI") or "•"
+alive_text = gvarstatus("ALIVE_TEKS_CUSTOM") or "👋 Hey, I am Alive!"
 
 
 @Client.on_message(
     filters.command(["alive", "dam"], [".", "-", "^", "!", "?"]) & filters.me
 )
 async def alive(client: Client, message: Message):
-    xx = await edit_or_reply(message, "⚡")
+    xx = await edit_or_reply(message, "🔥")
     await asyncio.sleep(2)
     send = client.send_video if alive_logo.endswith(".mp4") else client.send_photo
     uptime = await get_readable_time((time.time() - StartTime))
     man = (
-        f"**⚡ [Dᴀᴍ-Usᴇʀʙᴏᴛ](https://github.com/damsyx/Dam-Ubot) Active Masseh! ⚡**\n\n"
+        f"**[Dᴀᴍ-Usᴇʀʙᴏᴛ](https://github.com/damsyx/Dam-Ubot) is Up And Running!**\n\n"
         f"<b>{alive_text}</b>\n\n"
-        f"{emoji} <b>Oᴡɴᴇʀ -≽ </b> {client.me.mention} \n"
-        f"{emoji} <b>Mᴏᴅᴜʟᴇs -≽ </b> <code>{len(modules)} Modules</code> \n"
-        f"{emoji} <b>Dᴀᴍ Vᴇʀsɪᴏɴ  -≽ </b> <code>{BOT_VER}</code> \n"
-        f"{emoji} <b>Pʏᴛʜᴏɴ Vᴇʀsɪᴏɴ  -≽ </b> <code>{python_version()}</code> \n"
-        f"{emoji} <b>Pʏʀᴏɢʀᴀᴍ Vᴇʀsɪᴏɴ  -≽ </b> <code>{versipyro}</code> \n"
-        f"{emoji} <b>Bᴏᴛ Uᴘᴛɪᴍᴇ -≽ </b> <code>{uptime}</code> \n"
-        f"{emoji} <b>Gʀᴏᴜᴘ Sᴜᴘᴘᴏʀᴛ -≽ </b> [Dᴀᴍ-Sᴜᴘᴘᴏʀᴛ](https://t.me/{GROUP})"
+        f"{emoji} <b>Oᴡɴᴇʀ -≽</b> {client.me.mention} \n"
+        f"{emoji} <b>Mᴏᴅᴜʟᴇs -≽</b> <code>{len(modules)} Modules</code> \n"
+        f"{emoji} <b>Dᴀᴍ Vᴇʀsɪᴏɴ -≽</b> <code>{BOT_VER}</code> \n"
+        f"{emoji} <b>Pʏᴛʜᴏɴ Vᴇʀsɪᴏɴ -≽</b> <code>{python_version()}</code> \n"
+        f"{emoji} <b>Pʏʀᴏɢʀᴀᴍ Vᴇʀsɪᴏɴ -≽</b> <code>{versipyro}</code> \n"
+        f"{emoji} <b>Bᴏᴛ Uᴘᴛɪᴍᴇ -≽</b> <code>{uptime}</code> \n"
+        f"{emoji} <b>Gʀᴏᴜᴘ Sᴜᴘᴘᴏʀᴛ -≽</b> [Dᴀᴍ-Sᴜᴘᴘᴏʀᴛ](https://t.me/{GROUP})"
     )
     try:
         await asyncio.gather(
