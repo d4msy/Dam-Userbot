@@ -20,11 +20,11 @@ from Dam.utils import extract_user
 
 
 @Client.on_message(
-    filters.command(["sg", "sa", "sangmata"], [".", "-", "^", "!", "?"]) & filters.me
+    filters.command(["sg", "sa", "check"], [".", "-", "^", "!", "?"]) & filters.me
 )
 async def sg(client: Client, message: Message):
     args = await extract_user(message)
-    lol = await message.reply("💈 `Processing...`")
+    lol = await message.reply("♻️ `Processing...`")
     if args:
         try:
             user = await client.get_users(args)
@@ -40,7 +40,7 @@ async def sg(client: Client, message: Message):
 
     async for stalk in client.search_messages(bot, query="Name", limit=1):
         if not stalk:
-            await lol.edit_text("**Orang Ini Belum Pernah Mengganti Namanya**")
+            await lol.edit_text("**This Person Has Never Changed His Name.**")
             return
         elif stalk:
             await lol.edit(stalk.text)
