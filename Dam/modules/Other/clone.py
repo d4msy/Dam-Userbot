@@ -22,7 +22,7 @@ BIO = os.environ.get("BIO", "404 : Bio Lost")
 @Client.on_message(filters.command("clone", [".", "-", "^", "!", "?"]) & filters.me)
 async def clone(client: Client, message: Message):
     text = get_text(message)
-    op = await message.reply("✨ `Cloning`")
+    op = await message.reply("`Cloning...`")
     userk = get_user(message, text)[0]
     user_ = await client.get_users(userk)
     if not user_:
@@ -45,7 +45,7 @@ async def clone(client: Client, message: Message):
 
 @Client.on_message(filters.command("revert", [".", "-", "^", "!", "?"]) & filters.me)
 async def revert(client: Client, message: Message):
-    uy = await message.reply("👀 `Reverting...`")
+    uy = await message.reply("`Reverting...`")
     r_bio = BIO
 
     # Get ur Name back
