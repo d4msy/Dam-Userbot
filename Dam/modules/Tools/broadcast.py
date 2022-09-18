@@ -70,9 +70,7 @@ async def gcast_cmd(client: Client, message: Message):
                 except Exception:
                     error += 1
                     await asyncio.sleep(0.3)
-    await Dam.edit_text(
-        f"☑️ Done in `{done}` Groups, Error in `{error}` Groups"
-    )
+    await Dam.edit_text(f"☑️ Done in `{done}` Groups, Error in `{error}` Groups")
 
 
 @Client.on_message(filters.command("gucast", [".", "-", "^", "!", "?"]) & filters.me)
