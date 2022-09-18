@@ -77,7 +77,7 @@ async def tg_lock(
             "To unlock this, you have to unlock 'messages' first."
         )
 
-    await message.reply(("🔒 **Locked.***" if lock else "🔓 **Unlocked.**"))
+    await message.reply(("🔒 **Locked.**" if lock else "🔓 **Unlocked.**"))
 
 
 @Client.on_message(
