@@ -52,9 +52,7 @@ async def patebin(client: Client, message: Message):
         content = str(r.text)
     elif r.document:
         if r.document.file_size > 40000:
-            return await m.edit_text(
-                "You can only paste files smaller than 40KB."
-            )
+            return await m.edit_text("You can only paste files smaller than 40KB.")
         if not pattern.search(r.document.mime_type):
             return await m.edit_text("**Only for text and documents.**")
         doc = await message.reply_to_message.download()
