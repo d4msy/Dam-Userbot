@@ -14,7 +14,7 @@ from pyrogram.types import ChatPermissions, Message
 
 from Dam.modules.Ubot.help import add_command_help
 
-incorrect_parameters = "Incorrect Parameters, Ketik help locks untuk bantuan."
+incorrect_parameters = "**Usage:** `.help locks` for help."
 
 data = {
     "msg": "can_send_messages",
@@ -59,11 +59,11 @@ async def tg_lock(
 ):
     if lock:
         if perm not in permissions:
-            return await message.reply("Already locked.")
+            return await message.reply("**Already Locked!**")
         permissions.remove(perm)
     else:
         if perm in permissions:
-            return await message.reply("Already Unlocked.")
+            return await message.reply("**Already Unlocked!**")
         permissions.append(perm)
 
     permissions = {perm: True for perm in list(set(permissions))}
@@ -77,7 +77,7 @@ async def tg_lock(
             "To unlock this, you have to unlock 'messages' first."
         )
 
-    await message.reply(("Locked." if lock else "Unlocked."))
+    await message.reply(("🔒 **Locked.***" if lock else "🔓 **Unlocked.**"))
 
 
 @Client.on_message(
@@ -106,7 +106,7 @@ async def locks_func(client: Client, message: Message):
         )
     elif parameter == "all" and state == "lock":
         await client.set_chat_permissions(chat_id, ChatPermissions())
-        await message.reply(f"🔐 **Locked Everything in** {message.chat.title}")
+        await message.reply(f"🔒 **Locked all permission in Chats** {message.chat.title}")
 
     elif parameter == "all" and state == "unlock":
         await client.set_chat_permissions(
@@ -122,7 +122,7 @@ async def locks_func(client: Client, message: Message):
                 can_pin_messages=False,
             ),
         )
-        await message.reply(f"🔓 **Unlocked Everything in** {message.chat.title}")
+        await message.reply(f"🔓 **Unlocked all permission in Chats** {message.chat.title}")
 
 
 @Client.on_message(filters.command("locks", [".", "-", "^", "!", "?"]) & filters.me)
@@ -130,7 +130,7 @@ async def locktypes(client: Client, message: Message):
     permissions = await current_chat_permissions(client, message.chat.id)
 
     if not permissions:
-        return await message.reply("No Permissions.")
+        return await message.reply("**No Permissions!**")
 
     perms = ""
     for i in permissions:
