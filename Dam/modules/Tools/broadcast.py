@@ -49,7 +49,7 @@ async def gcast_cmd(client: Client, message: Message):
     if message.reply_to_message or get_arg(message):
         Dam = await message.reply("`Globally Broadcasting...`")
     else:
-        return await message.edit_text("**Give a Text or Reply Message.**")
+        return await message.reply("**Give a Text or Reply Message.**")
     done = 0
     error = 0
     async for dialog in client.get_dialogs():
@@ -71,7 +71,7 @@ async def gcast_cmd(client: Client, message: Message):
                     error += 1
                     await asyncio.sleep(0.3)
     await Dam.edit_text(
-        f"☑️ Done in sent to `{done}` Groups, Error in `{error}` Groups"
+        f"☑️ Done in `{done}` Groups, Error in `{error}` Groups"
     )
 
 
@@ -80,7 +80,7 @@ async def gucast_cmd(client: Client, message: Message):
     if message.reply_to_message or get_arg(message):
         Dam = await message.reply("`Globally Broadcasting...`")
     else:
-        return await message.edit_text("**Give a Text or Reply Message.**")
+        return await message.reply("**Give a Text or Reply Message.**")
     done = 0
     error = 0
     async for dialog in client.get_dialogs():
@@ -101,7 +101,7 @@ async def gucast_cmd(client: Client, message: Message):
                 except Exception:
                     error += 1
                     await asyncio.sleep(0.3)
-    await Dam.edit_text(f"☑️ Done in sent to `{done}` Users, Error in `{error}` Users")
+    await Dam.edit_text(f"☑️ Done in `{done}` Users, Error in `{error}` Users")
 
 
 @Client.on_message(filters.command("blchat", [".", "-", "^", "!", "?"]) & filters.me)
@@ -165,7 +165,7 @@ async def _(client: Client, message: Message):
     if gett in blchat:
         blacklistgrup = blchat.replace(gett, "")
         await xxx.edit(
-            f"**Successfully Delete** `{gc}` **from the gcast blacklist.**\n\nRestarting Heroku to Apply Changes."
+            f"**Successfully Deleted** `{gc}` **from the gcast blacklist.**\n\nRestarting Heroku to Apply Changes."
         )
         var = "BLACKLIST_GCAST"
         heroku_Config[var] = blacklistgrup
