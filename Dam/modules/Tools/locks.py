@@ -106,7 +106,9 @@ async def locks_func(client: Client, message: Message):
         )
     elif parameter == "all" and state == "lock":
         await client.set_chat_permissions(chat_id, ChatPermissions())
-        await message.reply(f"🔒 **Locked all permission in Chats** {message.chat.title}")
+        await message.reply(
+            f"🔒 **Locked all permission in Chats** {message.chat.title}"
+        )
 
     elif parameter == "all" and state == "unlock":
         await client.set_chat_permissions(
@@ -122,7 +124,9 @@ async def locks_func(client: Client, message: Message):
                 can_pin_messages=False,
             ),
         )
-        await message.reply(f"🔓 **Unlocked all permission in Chats** {message.chat.title}")
+        await message.reply(
+            f"🔓 **Unlocked all permission in Chats** {message.chat.title}"
+        )
 
 
 @Client.on_message(filters.command("locks", [".", "-", "^", "!", "?"]) & filters.me)
