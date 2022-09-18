@@ -10,7 +10,7 @@ from Dam.modules.Ubot.help import add_command_help
 
 
 @Client.on_message(
-    filters.me & filters.command(["admins", "staff"], [".", "-", "^", "!", "?"])
+    filters.me & filters.command(["admins"], [".", "-", "^", "!", "?"])
 )
 async def adminlist(client: Client, message: Message):
     replyid = None
@@ -46,21 +46,21 @@ async def adminlist(client: Client, message: Message):
     badmin.sort()
     totaladmins = len(creator) + len(admin) + len(badmin)
     teks = "**Admins in {}**\n".format(grup.title)
-    teks += "╒═══「 Creator 」\n"
+    teks += "╒═══「 Founder 」\n"
     for x in creator:
         teks += "│ • {}\n".format(x)
         if len(teks) >= 4096:
             await message.reply(message.chat.id, teks, reply_to_message_id=replyid)
             teks = ""
             toolong = True
-    teks += "╞══「 {} Human Administrator 」\n".format(len(admin))
+    teks += "╞══「 {} Admins 」\n".format(len(admin))
     for x in admin:
         teks += "│ • {}\n".format(x)
         if len(teks) >= 4096:
             await message.reply(message.chat.id, teks, reply_to_message_id=replyid)
             teks = ""
             toolong = True
-    teks += "╞══「 {} Bot Administrator 」\n".format(len(badmin))
+    teks += "╞══「 {} Bots 」\n".format(len(badmin))
     for x in badmin:
         teks += "│ • {}\n".format(x)
         if len(teks) >= 4096:
@@ -85,7 +85,7 @@ async def kickdel_cmd(client: Client, message: Message):
         for member in await message.chat.get_members()
         if member.user.is_deleted
     ]
-    await Man.edit(f"<b>Successfully kicked {len(values)} deleted account(s)</b>")
+    await Man.edit(f"<b>Successfully kicked {len(values)} Deleted account(s)</b>")
 
 
 @Client.on_message(
@@ -146,7 +146,7 @@ async def tag_all_users(client: Client, message: Message):
     if len(message.text.split()) >= 2:
         text = message.text.split(None, 1)[1]
     else:
-        text = "Hi all 🙃"
+        text = "👋 **Hi all**"
     kek = client.get_chat_members(message.chat.id)
     async for a in kek:
         if not a.user.is_bot:
@@ -211,7 +211,7 @@ async def mentionall(client: Client, message: Message):
     rep = message.reply_to_message
     text = get_arg(message)
     if not rep and not text:
-        return await message.reply("**Berikan Sebuah Teks atau Reply**")
+        return await message.reply("**Provide a Text or Reply!**")
 
     spam_chats.append(chat_id)
     usrnum = 0
@@ -239,19 +239,19 @@ async def mentionall(client: Client, message: Message):
 @Client.on_message(filters.command("cancel", [".", "-", "^", "!", "?"]) & filters.me)
 async def cancel_spam(client: Client, message: Message):
     if not message.chat.id in spam_chats:
-        return await message.edit("__Not Tagall.__")
+        return await message.edit("**Not Tag all!**")
     else:
         try:
             spam_chats.remove(message.chat.id)
         except:
             pass
-        return await message.edit("__Stopped Mention.__")
+        return await message.edit("**Stopped Mention!**")
 
 
 add_command_help(
     "groups",
     [
-        [".adminlist or .staff", "untuk melihat daftar admin di grup."],
+        [".admins", "untuk melihat daftar admin di grup."],
         [".bots", "Untuk melihat daftar bot dalam grup."],
         [".tagall or .all <text>", "Untuk Mentag semua anggota member grup."],
         [".hidetag", "Untuk menandai semua anggota grup dengan angjay rahasia."],
