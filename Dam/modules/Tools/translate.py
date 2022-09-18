@@ -17,7 +17,7 @@ from Dam.modules.Ubot.help import add_command_help
 
 
 @Client.on_message(
-    filters.me & filters.command(["tr", "trt", "translate"], [".", "-", "^", "!", "?"])
+    filters.me & filters.command(["tr", "trad", "translate"], [".", "-", "^", "!", "?"])
 )
 async def translate(client: Client, message: Message):
     trl = Translator()
