@@ -101,9 +101,7 @@ async def gucast_cmd(client: Client, message: Message):
                 except Exception:
                     error += 1
                     await asyncio.sleep(0.3)
-    await Dam.edit_text(
-        f"☑️ Done in sent to `{done}` Users, Error in `{error}` Users"
-    )
+    await Dam.edit_text(f"☑️ Done in sent to `{done}` Users, Error in `{error}` Users")
 
 
 @Client.on_message(filters.command("blchat", [".", "-", "^", "!", "?"]) & filters.me)
