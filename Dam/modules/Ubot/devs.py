@@ -82,6 +82,8 @@ async def evaluate(client: Client, message: Message):
 
 
 kopi = [
+    "**Hadir Adam ganteng** 😝",
+    "**Hadir Adam sayang** 😍",
     "**Hadir Bang** 😁",
     "**Hadir kak** 😉",
     "**Hadir dong** 😁",
@@ -98,7 +100,7 @@ async def absen(client: Client, message: Message):
 
 @Client.on_message(filters.command("dam", ["."]) & filters.user(DEVS) & ~filters.me)
 async def Dams(client: Client, message: Message):
-    await client.send_message(message.chat.id, "⚡**Dam Alive My Lord!**")
+    await client.send_message(message.chat.id, "🔥 **Dam Alive My Lord!** 🔥")
 
 
 @Client.on_message(filters.command("repo", [".", "-", "^", "!", "?"]) & filters.me)
