@@ -80,7 +80,9 @@ async def purgeme(client: Client, message: Message):
         return await edit_or_reply(message, "Please enter numbers!")
     n = int(n)
     if n < 1:
-        return await edit_or_reply(message, "Enter the number of messages you want to delete!")
+        return await edit_or_reply(
+            message, "Enter the number of messages you want to delete!"
+        )
     chat_id = message.chat.id
     message_ids = [
         m.id
