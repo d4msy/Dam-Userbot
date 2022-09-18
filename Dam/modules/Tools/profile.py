@@ -46,9 +46,7 @@ async def unblock_user_func(client: Client, message: Message):
 async def setname(client: Client, message: Message):
     Man = await message.reply("♻️ `Processing...`")
     if len(message.command) == 1:
-        return await Man.edit(
-            "Provide text to set as your telegram name."
-        )
+        return await Man.edit("Provide text to set as your telegram name.")
     elif len(message.command) > 1:
         name = message.text.split(None, 1)[1]
         try:
@@ -57,9 +55,7 @@ async def setname(client: Client, message: Message):
         except Exception as e:
             await Man.edit(f"**ERROR:** `{e}`")
     else:
-        return await Man.edit(
-            "Provide text to set as your telegram name."
-        )
+        return await Man.edit("Provide text to set as your telegram name.")
 
 
 @Client.on_message(filters.command(["setbio"], [".", "-", "^", "!", "?"]) & filters.me)
@@ -95,9 +91,7 @@ async def set_pfp(client: Client, message: Message):
             os.remove(profile_photo)
         await message.edit("**Your Profile Photo Has Been Successfully Changed.**")
     else:
-        await message.edit(
-            "`Reply to any photo to set as profile photo.`"
-        )
+        await message.edit("`Reply to any photo to set as profile photo.`")
         await sleep(3)
         await message.delete()
 
