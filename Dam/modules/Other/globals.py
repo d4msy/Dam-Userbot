@@ -42,18 +42,18 @@ globals_init()
 async def gban_user(client: Client, message: Message):
     user_id, reason = await extract_user_and_reason(message, sender_chat=True)
     if message.from_user.id != client.me.id:
-        Dam = await message.reply("☠️ `Gbanning...`")
+        Dam = await message.reply("`Gbanning...`")
     else:
-        Dam = await message.edit("☠️ `Gbanning....`")
+        Dam = await message.edit("`Gbanning....`")
     if not user_id:
-        return await Dam.edit("Saya tidak dapat menemukan pengguna itu.")
+        return await Dam.edit("I can't find that user.")
     if user_id == client.me.id:
-        return await Dam.edit("**Ngapain NgeGban diri sendiri Goblok 🐽**")
+        return await Dam.edit("**Why are you banning yourself!**")
     if user_id in DEVS:
-        return await Dam.edit("**Gagal GBAN karena dia adalah Pembuat saya 🗿**")
+        return await Dam.edit("**Failed GBAN because he is my developer!**")
     if user_id in WHITELIST:
         return await Man.edit(
-            "**Gagal GBAN karena dia adalah admin @damprivateroom 🗿**"
+            "**GBAN failed because he is the admin @damprivateroom**"
         )
     if user_id:
         try:
@@ -63,11 +63,11 @@ async def gban_user(client: Client, message: Message):
 
     if sql.is_gbanned(user.id):
         return await Dam.edit(
-            f"[Sikintil](tg://user?id={user.id}) **ini sudah ada di daftar gban euy**"
+            f"[Sikintil](tg://user?id={user.id}) **it's already on the Gbanning.**"
         )
     f_chats = await get_ub_chats(client)
     if not f_chats:
-        return await Dam.edit("**Anda tidak mempunyai GC yang anda admin 🥺**")
+        return await Dam.edit("**You don't have a groups that you admin!**")
     er = 0
     done = 0
     for gokid in f_chats:
@@ -78,13 +78,13 @@ async def gban_user(client: Client, message: Message):
             er += 1
     sql.gban(user.id)
     msg = (
-        r"**\\#GBanned_User//**"
-        f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})"
-        f"\n**User ID:** `{user.id}`"
+        r"**☑️ Gbanning**"
+        f"\n\n**👤 Username:** [{user.first_name}](tg://user?id={user.id})"
+        f"\n**🆔 User ID:** `{user.id}`"
     )
     if reason:
         msg += f"\n**Reason:** `{reason}`"
-    msg += f"\n**Affected To:** `{done}` **Chats**"
+    msg += f"\n**Done in:** `{done}` **Chats**"
     await Dam.edit(msg)
 
 
@@ -95,9 +95,9 @@ async def gban_user(client: Client, message: Message):
 async def ungban_user(client: Client, message: Message):
     user_id, reason = await extract_user_and_reason(message, sender_chat=True)
     if message.from_user.id != client.me.id:
-        Dam = await message.reply("🎭 `UnGbanning...`")
+        Dam = await message.reply("`UnGbanning...`")
     else:
-        Dam = await message.edit("🎭 `UnGbanning....`")
+        Dam = await message.edit("`UnGbanning....`")
     if not user_id:
         return await Dam.edit("I can't find that user.")
     if user_id:
@@ -111,7 +111,7 @@ async def ungban_user(client: Client, message: Message):
             return await Dam.edit("`User already ungban`")
         ung_chats = await get_ub_chats(client)
         if not ung_chats:
-            return await Dam.edit("**Anda tidak mempunyai GC yang anda admin 🥺**")
+            return await Dam.edit("**You don't have a groups that you admin!**")
         er = 0
         done = 0
         for good_boi in ung_chats:
@@ -122,13 +122,13 @@ async def ungban_user(client: Client, message: Message):
                 er += 1
         sql.ungban(user.id)
         msg = (
-            r"**\\#UnGbanned_User//**"
-            f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})"
-            f"\n**User ID:** `{user.id}`"
+            r"**☑️ UnGbanning**"
+            f"\n\n**👤 Username:** [{user.first_name}](tg://user?id={user.id})"
+            f"\n**🆔 User ID:** `{user.id}`"
         )
         if reason:
             msg += f"\n**Reason:** `{reason}`"
-        msg += f"\n**Affected To:** `{done}` **Chats**"
+        msg += f"\n**Done jn:** `{done}` **Chats**"
         await Dam.edit(msg)
     except Exception as e:
         await Dam.edit(f"**ERROR:** `{e}`")
@@ -138,14 +138,14 @@ async def ungban_user(client: Client, message: Message):
 @Client.on_message(filters.command("listgban", [".", "-", "^", "!", "?"]) & filters.me)
 async def gbanlist(client: Client, message: Message):
     users = sql.gbanned_users()
-    Dam = await message.reply("💈 `Processing...`")
+    Dam = await message.reply("♻️ `Processing...`")
     if not users:
         return await Dam.edit("The list is empty!")
-    gban_list = "**GBanned Users:**\n"
+    gban_list = "☠️ **Gbanning Users:**\n"
     count = 0
     for i in users:
         count += 1
-        gban_list += f"**{count} -** `{i.sender}`\n"
+        gban_list += f"**{count} •** `{i.sender}`\n"
     return await Dam.edit(gban_list)
 
 
@@ -153,7 +153,7 @@ async def gbanlist(client: Client, message: Message):
 async def gmute_user(client: Client, message: Message):
     args = await extract_user(message)
     reply = message.reply_to_message
-    Dam = await message.reply("💈 `Processing...`")
+    Dam = await message.reply("♻️ `Processing...`")
     if args:
         try:
             user = await client.get_users(args)
@@ -167,12 +167,12 @@ async def gmute_user(client: Client, message: Message):
         await Dam.edit(f"`Please specify a valid user!`")
         return
     if user.id == client.me.id:
-        return await Man.edit("**Ngapain NgeGmute diri sendiri Goblok 🐽**")
+        return await Man.edit("**Why are you Gmute yourself.**")
     if user.id in DEVS:
-        return await Man.edit("**Gagal GMUTE karena dia adalah Pembuat saya 🗿**")
+        return await Man.edit("**Failed Gmute because he is my developer!**")
     if user.id in WHITELIST:
         return await Man.edit(
-            "**Gagal GMUTE karena dia adalah admin @damprivateroom 🗿**"
+            "**Failed Gmute because he is admin @damprivateroom**"
         )
     try:
         replied_user = reply.from_user
@@ -183,7 +183,7 @@ async def gmute_user(client: Client, message: Message):
 
     try:
         if sql2.is_gmuted(user.id):
-            return await Dam.edit("`User already gmuted`")
+            return await Dam.edit("`User already gmuted!`")
         sql2.gmute(user.id)
         await Dam.edit(f"[{user.first_name}](tg://user?id={user.id}) globally gmuted!")
         try:
@@ -201,7 +201,7 @@ async def gmute_user(client: Client, message: Message):
 async def ungmute_user(client: Client, message: Message):
     args = await extract_user(message)
     reply = message.reply_to_message
-    Dam = await message.reply("💈 `Processing...`")
+    Dam = await message.reply("♻️ `Processing...`")
     if args:
         try:
             user = await client.get_users(args)
@@ -224,7 +224,7 @@ async def ungmute_user(client: Client, message: Message):
 
     try:
         if not sql2.is_gmuted(user.id):
-            return await Dam.edit("`User already ungmuted`")
+            return await Dam.edit("`User already ungmuted!`")
         sql2.ungmute(user.id)
         try:
             common_chats = await client.get_common_chats(user.id)
@@ -243,14 +243,14 @@ async def ungmute_user(client: Client, message: Message):
 @Client.on_message(filters.command("listgmute", [".", "-", "^", "!", "?"]) & filters.me)
 async def gmutelist(client: Client, message: Message):
     users = sql2.gmuted_users()
-    Dam = await message.reply("💈 `Processing...`")
+    Dam = await message.reply("♻️ `Processing...`")
     if not users:
         return await Dam.edit("listEmpty")
     gmute_list = "**GMuted Users:**\n"
     count = 0
     for i in users:
         count += 1
-        gmute_list += f"**{count} -** `{i.sender}`\n"
+        gmute_list += f"**{count} •** `{i.sender}`\n"
     return await Dam.edit(gmute_list)
 
 
