@@ -20,7 +20,7 @@ from Dam.modules.Ubot.help import add_command_help
 
 @Client.on_message(filters.me & filters.command("invite", [".", "-", "^", "!", "?"]))
 async def inviteee(client: Client, message: Message):
-    mg = await edit_or_reply(message, "`Adding Users!`")
+    mg = await edit_or_reply(message, "`Adding Users...`")
     user_s_to_add = message.text.split(" ", 1)[1]
     if not user_s_to_add:
         await mg.edit("`Give Me Users To Add! Check Help Menu For More Info!`")
@@ -65,14 +65,14 @@ async def inv(client: Client, message: Message):
     filters.command("invitelink", [".", "-", "^", "!", "?"]) & filters.me
 )
 async def invite_link(client: Client, message: Message):
-    Man = await edit_or_reply(message, "`Processing...`")
+    Man = await edit_or_reply(message, "♻️ `Processing...`")
     if message.chat.type in [ChatType.GROUP, ChatType.SUPERGROUP]:
         message.chat.title
         try:
             link = await client.export_chat_invite_link(message.chat.id)
             await Man.edit(f"**Link Invite:** {link}")
         except Exception:
-            await Man.edit("Denied permission")
+            await Man.edit("**Denied permission...**")
 
 
 add_command_help(
