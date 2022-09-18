@@ -52,9 +52,7 @@ async def gban_user(client: Client, message: Message):
     if user_id in DEVS:
         return await Dam.edit("**Failed GBAN because he is my developer!**")
     if user_id in WHITELIST:
-        return await Man.edit(
-            "**GBAN failed because he is the admin @damprivateroom**"
-        )
+        return await Man.edit("**GBAN failed because he is the admin @damprivateroom**")
     if user_id:
         try:
             user = await client.get_users(user_id)
@@ -171,9 +169,7 @@ async def gmute_user(client: Client, message: Message):
     if user.id in DEVS:
         return await Man.edit("**Failed Gmute because he is my developer!**")
     if user.id in WHITELIST:
-        return await Man.edit(
-            "**Failed Gmute because he is admin @damprivateroom**"
-        )
+        return await Man.edit("**Failed Gmute because he is admin @damprivateroom**")
     try:
         replied_user = reply.from_user
         if replied_user.is_self:
