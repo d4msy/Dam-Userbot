@@ -47,9 +47,9 @@ blchat = getenv("BLACKLIST_GCAST") or ""
 @Client.on_message(filters.command("gcast", [".", "-", "^", "!"]) & filters.me)
 async def gcast_cmd(client: Client, message: Message):
     if message.reply_to_message or get_arg(message):
-        Dam = await message.reply("`Global Broadcasting!`")
+        Dam = await message.reply("`Globally Broadcasting...`")
     else:
-        return await message.edit_text("**Berikan Sebuah Text atau Reply Pesan!**")
+        return await message.edit_text("**Give a Text or Reply Message.**")
     done = 0
     error = 0
     async for dialog in client.get_dialogs():
@@ -71,16 +71,16 @@ async def gcast_cmd(client: Client, message: Message):
                     error += 1
                     await asyncio.sleep(0.3)
     await Dam.edit_text(
-        f"☑️ Selesai Dikirim Ke `{done}` Obrolan, Gagal Dalam `{error}` Obrolan"
+        f"☑️ Done in sent to `{done}` Groups, Error in `{error}` Groups"
     )
 
 
 @Client.on_message(filters.command("gucast", [".", "-", "^", "!", "?"]) & filters.me)
 async def gucast_cmd(client: Client, message: Message):
     if message.reply_to_message or get_arg(message):
-        Dam = await message.reply("`Global Broadcasting!`")
+        Dam = await message.reply("`Globally Broadcasting...`")
     else:
-        return await message.edit_text("**Berikan Sebuah Text atau Reply Pesan!**")
+        return await message.edit_text("**Give a Text or Reply Message.**")
     done = 0
     error = 0
     async for dialog in client.get_dialogs():
@@ -102,7 +102,7 @@ async def gucast_cmd(client: Client, message: Message):
                     error += 1
                     await asyncio.sleep(0.3)
     await Dam.edit_text(
-        f"☑️ Selesai Dikirim Ke `{done}` Pengguna, Gagal Dalam `{error}` Pengguna"
+        f"☑️ Done in sent to `{done}` Users, Error in `{error}` Users"
     )
 
 
@@ -113,22 +113,22 @@ async def gcast_bl(client: Client, message: Message):
     list = blc.replace(" ", "\n» ")
     if blacklistgc == "True":
         await message.reply(
-            f"🔮 **Blacklist GCAST:** `Enabled`\n\n📚 **Blacklist Group:**\n» {list}\n\nKetik `.addbl` di grup yang ingin anda tambahkan ke daftar blacklist gcast.",
+            f"💡 **Blacklist GCAST:** `Enabled`\n\n📝 **Blacklist Group:**\n» {list}\n\nUsage: `.addbl` in the group you want to add to the gcast blacklist.",
         )
     else:
-        await message.reply("🔮 **Blacklist GCAST:** `Disabled`")
+        await message.reply("🌐 **Blacklist GCAST:** `Disabled`")
 
 
 @Client.on_message(filters.command("addbl", [".", "-", "^", "!", "?"]) & filters.me)
 async def add(client: Client, message: Message):
-    xxnx = await message.reply("💈 `Processing...`")
+    xxnx = await message.reply("♻️ `Processing...`")
     var = "BLACKLIST_GCAST"
     gc = message.chat.id
     if HEROKU_APP_NAME is not None:
         app = Heroku.app(HEROKU_APP_NAME)
     else:
         await xnxx.edit(
-            "**Silahkan Tambahkan Var** `HEROKU_APP_NAME` **untuk menambahkan blacklist**",
+            "**Please Add Var** `HEROKU_APP_NAME` **to add blacklist**",
         )
         return
     heroku_Config = app.config()
@@ -144,20 +144,20 @@ async def add(client: Client, message: Message):
         .replace("set() ", "")
     )
     await xxnx.edit(
-        f"**Berhasil Menambahkan** `{gc}` **ke daftar blacklist gcast.**\n\nSedang MeRestart Heroku untuk Menerapkan Perubahan."
+        f"**Successfully Added** `{gc}` **to the gcast blacklist.**\n\nRestarting Heroku to Apply Changes."
     )
     heroku_Config[var] = blacklistgrup
 
 
 @Client.on_message(filters.command("delbl", [".", "-", "^", "!", "?"]) & filters.me)
 async def _(client: Client, message: Message):
-    xxx = await message.reply("💈 `Processing...`")
+    xxx = await message.reply("♻️ `Processing...`")
     gc = message.chat_id
     if HEROKU_APP_NAME is not None:
         app = Heroku.app(HEROKU_APP_NAME)
     else:
         await xxx.edit(
-            "**Silahkan Tambahkan Var** `HEROKU_APP_NAME` **untuk menghapus blacklist**",
+            "**Please Add Var** `HEROKU_APP_NAME` **to remove gcast blacklist.**",
         )
         return
     heroku_Config = app.config()
@@ -167,12 +167,12 @@ async def _(client: Client, message: Message):
     if gett in blchat:
         blacklistgrup = blchat.replace(gett, "")
         await xxx.edit(
-            f"**Berhasil Menghapus** `{gc}` **dari daftar blacklist gcast.**\n\nSedang MeRestart Heroku untuk Menerapkan Perubahan."
+            f"**Successfully Delete** `{gc}` **from the gcast blacklist.**\n\nRestarting Heroku to Apply Changes."
         )
         var = "BLACKLIST_GCAST"
         heroku_Config[var] = blacklistgrup
     else:
-        await xxx.edit("**Grup ini tidak ada dalam daftar blacklist gcast.**", 45)
+        await xxx.edit("**This group is not on the gcast blacklist.**", 45)
 
 
 add_command_help(
