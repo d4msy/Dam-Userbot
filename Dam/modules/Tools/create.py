@@ -21,20 +21,20 @@ async def create(client: Client, message: Message):
     group_type = message.command[1]
     split = message.command[2:]
     group_name = " ".join(split)
-    Dam = await message.reply("💈 `Processing...`")
+    Dam = await message.reply("♻️ `Processing...`")
     desc = "Welcome To My " + ("Group" if group_type == "gc" else "Channel")
     if group_type == "gc":  # for supergroup
         _id = await client.create_supergroup(group_name, desc)
         link = await client.get_chat(_id["id"])
         await Dam.edit(
-            f"*✅ **Berhasil Membuat Group Telegram: [{group_name}]({link['invite_link']})**",
+            f"*☑️ **Successfully Create Telegram Group: [{group_name}]({link['invite_link']})**",
             disable_web_page_preview=True,
         )
     elif group_type == "ch":  # for channel
         _id = await client.create_channel(group_name, desc)
         link = await client.get_chat(_id["id"])
         await Dam.edit(
-            f"**✅ Berhasil Membuat Channel Telegram: [{group_name}]({link['invite_link']})**",
+            f"**☑️ Successfully Create Telegram Channel: [{group_name}]({link['invite_link']})**",
             disable_web_page_preview=True,
         )
 
