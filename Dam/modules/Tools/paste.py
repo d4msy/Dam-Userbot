@@ -47,16 +47,16 @@ async def patebin(client: Client, message: Message):
     r = message.reply_to_message
     if not r.text and not r.document:
         return await message.reply("Hanya untuk text dan documents.")
-    m = await message.reply("Pasting...")
+    m = await message.reply("`Pasting...`")
     if r.text:
         content = str(r.text)
     elif r.document:
         if r.document.file_size > 40000:
             return await m.edit_text(
-                "Anda hanya dapat paste file yang lebih kecil dari 40KB."
+                "You can only paste files smaller than 40KB."
             )
         if not pattern.search(r.document.mime_type):
-            return await m.edit_text("Hanya untuk text dan documents.")
+            return await m.edit_text("**Only for text and documents.**")
         doc = await message.reply_to_message.download()
         async with aiofiles.open(doc, mode="r") as f:
             content = await f.read()
@@ -72,4 +72,4 @@ async def patebin(client: Client, message: Message):
         )
         await m.delete()
     except Exception:
-        await m.edit_text("Here's your paste")
+        await m.edit_text("**Here's your paste.**")
