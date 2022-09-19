@@ -13,7 +13,7 @@ class First:
     ALIVE = "`Still Working On Fire 🔥`"
     REPO = """
 ❏ 👋 **Hᴇʏ**, **I'ᴀᴍ Usɪɴɢ** ✘ **[Dᴀᴍ-Uʙᴏᴛ](https://github.com/damsyx/Dam-Ubot)** ✘
-├≽ **Rᴇᴘᴏ** ➠ [Dᴀᴍ-Uʙᴏᴛ](https://github.com/damsyx/Dam-Ubot
+├≽ **Rᴇᴘᴏ** ➠ [Dᴀᴍ-Uʙᴏᴛ](https://github.com/damsyx/Dam-Ubot)
 ├≽ **Dᴀᴍ Vᴇʀsɪᴏɴ** ➠ `v2.0.2`
 ├≽ **Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ** ➠ [Dᴀᴍ-Sᴜᴘᴘᴏʀᴛ](https://t.me/damprivateroom)
 ├≽ **Dᴇᴘʟᴏʏ-Uʙᴏᴛ** ➠ [Hᴇʀᴇ](https://telegram.dog/XTZ_HerokuBot?start=ZGFtc3l4L0RhbS1VYm90IG1haW4)
