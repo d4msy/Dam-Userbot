@@ -12,7 +12,7 @@
 class First:
     ALIVE = "`Still Working On Fire 🔥`"
     REPO = """
-❏ 👋 **Hᴇʏ**, **I'ᴀᴍ Usɪɴɢ** ⚡ **[Dᴀᴍ-Uʙᴏᴛ](https://github.com/damsyx/Dam-Ubot)** ⚡
+❏ 👋 **Hᴇʏ**, **I'ᴀᴍ Usɪɴɢ** ✘ **[Dᴀᴍ-Uʙᴏᴛ](https://github.com/damsyx/Dam-Ubot)** ✘
 ├≽ **Rᴇᴘᴏ** ➠ [Dᴀᴍ-Uʙᴏᴛ](https://github.com/damsyx/Dam-Ubot
 ├≽ **Dᴀᴍ Vᴇʀsɪᴏɴ** ➠ `v2.0.2`
 ├≽ **Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ** ➠ [Dᴀᴍ-Sᴜᴘᴘᴏʀᴛ](https://t.me/damprivateroom)
