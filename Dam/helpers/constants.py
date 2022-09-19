@@ -12,12 +12,12 @@
 class First:
     ALIVE = "`Still Working On Fire 🔥`"
     REPO = """
-👋 **Hey**, **I'am using** ⚡ **[Dam-Ubot](https://github.com/damsyx/Dam-Ubot)** ⚡
-
-• **Userbot Version** -≽ `v2.0.2`
-• **Group Support** -≽ [Dam Support](t.me/damprivateroom)
-• **Repo** -≽ [Dam-Ubot](https://github.com/damsyx/Dam-Ubot)
-• **Deploy** -≽ [Click Here](https://telegram.dog/XTZ_HerokuBot?start=ZGFtc3l4L0RhbS1VYm90IG1haW4)"""
+❏ 👋 **Hᴇʏ**, **I'ᴀᴍ Usɪɴɢ** ⚡ **[Dᴀᴍ-Uʙᴏᴛ](https://github.com/damsyx/Dam-Ubot)** ⚡
+├≽ **Rᴇᴘᴏ** ➠ [Dᴀᴍ-Uʙᴏᴛ](https://github.com/damsyx/Dam-Ubot
+├≽ **Dᴀᴍ Vᴇʀsɪᴏɴ** ➠ `v2.0.2`
+├≽ **Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ** ➠ [Dᴀᴍ-Sᴜᴘᴘᴏʀᴛ](https://t.me/damprivateroom)
+├≽ **Dᴇᴘʟᴏʏ-Uʙᴏᴛ** ➠ [Hᴇʀᴇ](https://telegram.dog/XTZ_HerokuBot?start=ZGFtc3l4L0RhbS1VYm90IG1haW4)
+└≽ **Dᴇᴠᴇʟᴏᴘᴇʀ** ➠ [ᴅᴀϻ•](https://t.me/xflsdam)"""
     CREATOR = 'I was created by my master <a href="https://github.com/mrismanaziz/PyroMan-Userbot">Man</a> on a rainy day.'
     MSG_ON = """
 ☑️ **PyroDam-Userbot Berhasil Di Aktifkan!**
