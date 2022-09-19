@@ -18,8 +18,8 @@ from Dam.helpers.misc import create_botlog, git, heroku
 MSG_ON = """
 ☑️ **PyroDam-Userbot Berhasil Di Aktifkan!**
 ━━
--≽ **🤖 Userbot Version -** `{}`
--≽ **Ketik** `.alive` **Untuk Mengecheck Bot.**
+• **🤖 Userbot Version -** `{}`
+• **Ketik** `.alive` **Untuk Mengecheck Bot.**
 ━━
 """
 
