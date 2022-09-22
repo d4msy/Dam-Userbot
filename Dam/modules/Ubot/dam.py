@@ -8,7 +8,6 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 
 from config import *
-from Dam.helpers.adminHelpers import DEVS
 from Dam.helpers.constants import WWW
 from Dam.helpers.expand import expand_url
 from Dam.helpers.PyroHelpers import SpeedConvert
@@ -67,16 +66,7 @@ async def pingme(client: Client, message: Message):
     mulai = time.time()
     dam = await message.reply_text("...")
     akhir = time.time()
-    await dam.edit_text(f"**Pong!**\n`{round((akhir - mulai) * 1000,3)}ms`")
-
-
-@Client.on_message(filters.command("cping", ["("]) & filters.user(DEVS) & ~filters.me)
-async def pingme(client: Client, message: Message):
-    """Ping the assistant"""
-    mulai = time.time()
-    dam = await message.reply_text("...")
-    akhir = time.time()
-    await dam.edit_text(f"**Pong!**\n`{round((akhir - mulai) * 1000,3)}ms`")
+    await dam.edit_text(f"🏓 **Pong!**\n`{round((akhir - mulai) * 1000,3)}ms`")
 
 
 @Client.on_message(filters.command("expand", [".", "!", "-", "^", "?"]) & filters.me)
