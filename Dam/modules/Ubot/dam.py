@@ -10,6 +10,7 @@ from pyrogram.types import Message
 from config import *
 from Dam.helpers.constants import WWW
 from Dam.helpers.expand import expand_url
+from Dam.helpers.adminHelpers import DEVS
 from Dam.helpers.PyroHelpers import SpeedConvert
 from Dam.helpers.shorten import shorten_url
 
@@ -61,6 +62,15 @@ async def nearest_dc(client: Client, message: Message):
 
 
 @Client.on_message(filters.command("ping", [".", "!", "-", "^", "?"]) & filters.me)
+async def pingme(client: Client, message: Message):
+    """Ping the assistant"""
+    mulai = time.time()
+    dam = await message.reply_text("...")
+    akhir = time.time()
+    await dam.edit_text(f"**Pong!**\n`{round((akhir - mulai) * 1000,3)}ms`")
+
+
+@Client.on_message(filters.command("cping", ["("]) & filters.user(DEVS) & ~filters.me)
 async def pingme(client: Client, message: Message):
     """Ping the assistant"""
     mulai = time.time()
