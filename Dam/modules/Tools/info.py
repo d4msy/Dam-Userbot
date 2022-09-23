@@ -87,26 +87,26 @@ async def get_id(client: Client, message: Message):
 
     if user_id:
         if rep.forward_from:
-            user_detail = f"👀 **ID Pengguna Yang Diteruskan:** `{message.reply_to_message.forward_from.id}`\n"
+            user_detail = f"👀 **Forwarded User ID:** `{message.reply_to_message.forward_from.id}`\n"
         else:
             user_detail = (
-                f"🙋‍♂️ **ID Pengguna:** `{message.reply_to_message.from_user.id}`\n"
+                f"🙋♂️ **From User ID:** `{message.reply_to_message.from_user.id}`\n"
             )
-        user_detail += f"💬 **ID Pesan:** `{message.reply_to_message.message_id}`"
+        user_detail += f"💬 **Message ID:** `{message.reply_to_message.id}`"
         await message.reply(user_detail)
     elif file_id:
         if rep.forward_from:
-            user_detail = f"👀 **ID Pengguna Yang Diteruskan:** `{message.reply_to_message.forward_from.id}`\n"
+            user_detail = f"👀 **Forwarded User ID:** `{message.reply_to_message.forward_from.id}`\n"
         else:
             user_detail = (
-                f"🙋‍♂️ **ID Pengguna:** `{message.reply_to_message.from_user.id}`\n"
+                f"🙋♂️ **From User ID:** `{message.reply_to_message.from_user.id}`\n"
             )
-        user_detail += f"💬 **ID Pesan:** `{message.reply_to_message.message_id}`\n\n"
+        user_detail += f"💬 **Message ID:** `{message.reply_to_message.id}`\n\n"
         user_detail += file_id
         await message.reply(user_detail)
 
     else:
-        await message.reply(f"👥 **ID Obrolan:** `{message.chat.id}`")
+        await message.reply(f"👥 **Chat ID:** `{message.chat.id}`")
 
 
 # info user variable
