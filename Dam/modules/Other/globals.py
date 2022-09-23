@@ -126,7 +126,7 @@ async def ungban_user(client: Client, message: Message):
         )
         if reason:
             msg += f"\n**Reason:** `{reason}`"
-        msg += f"\n**Done jn:** `{done}` **Chats**"
+        msg += f"\n**Done in:** `{done}` **Chats**"
         await Dam.edit(msg)
     except Exception as e:
         await Dam.edit(f"**ERROR:** `{e}`")
