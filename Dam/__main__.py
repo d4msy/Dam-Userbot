@@ -16,11 +16,11 @@ from Dam import BOTLOG_CHATID, LOGGER, LOOP, aiosession, bot1, bots
 from Dam.helpers.misc import create_botlog, git, heroku
 
 MSG_ON = """
-☑️ **PyroDam-Userbot Berhasil Di Aktifkan!**
-━━
-• **🤖 Userbot Version -** `{}`
-• **Ketik** `.alive` **Untuk Mengecheck Bot.**
-━━
+┌| **Dam-Ubot Berhasil Di Aktifkan.** |┘
+━━━━━━━━━━━━━━━━━━━━━━━━
+◈ **🤖 Userbot Version -** `{}`
+◈ **Ketik** `.alive` **Untuk Mengecheck Bot.**
+━━━━━━━━━━━━━━━━━━━━━━━━
 """
 
 
@@ -29,10 +29,12 @@ async def main():
         try:
             await bot.start()
             bot.me = await bot.get_me()
-            await bot.join_chat("Lunatic0de")
-            await bot.join_chat("SharingUserbot")
             await bot.join_chat("damprivateroom")
             await bot.join_chat("diarydam")
+            await bot.join_chat("Lunatic0de")
+            await bot.join_chat("SharingUserbot")
+            await bot.join_chat("userunknown404")
+            await bot.join_chat("CilikSupport")
             try:
                 await bot.send_message(BOTLOG_CHATID, MSG_ON.format(BOT_VER))
             except BaseException:
