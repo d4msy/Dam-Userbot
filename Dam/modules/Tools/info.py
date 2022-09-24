@@ -87,26 +87,26 @@ async def get_id(client: Client, message: Message):
 
     if user_id:
         if rep.forward_from:
-            user_detail = f"👀 **Forwarded User ID:** `{message.reply_to_message.forward_from.id}`\n"
+            user_detail = f"**Forwarded User ID:** `{message.reply_to_message.forward_from.id}`\n"
         else:
             user_detail = (
-                f"🙋♂️ **From User ID:** `{message.reply_to_message.from_user.id}`\n"
+                f"**From User ID:** `{message.reply_to_message.from_user.id}`\n"
             )
-        user_detail += f"💬 **Message ID:** `{message.reply_to_message.id}`"
+        user_detail += f"**Message ID:** `{message.reply_to_message.id}`"
         await message.reply(user_detail)
     elif file_id:
         if rep.forward_from:
-            user_detail = f"👀 **Forwarded User ID:** `{message.reply_to_message.forward_from.id}`\n"
+            user_detail = f"**Forwarded User ID:** `{message.reply_to_message.forward_from.id}`\n"
         else:
             user_detail = (
-                f"🙋♂️ **From User ID:** `{message.reply_to_message.from_user.id}`\n"
+                f"**From User ID:** `{message.reply_to_message.from_user.id}`\n"
             )
-        user_detail += f"💬 **Message ID:** `{message.reply_to_message.id}`\n\n"
+        user_detail += f"**Message ID:** `{message.reply_to_message.id}`\n\n"
         user_detail += file_id
         await message.reply(user_detail)
 
     else:
-        await message.reply(f"👥 **Chat ID:** `{message.chat.id}`")
+        await message.reply(f"**Current Chat ID:** `{message.chat.id}`")
 
 
 # info user variable
@@ -117,7 +117,7 @@ async def get_id(client: Client, message: Message):
 )
 async def who_is(client: Client, message: Message):
     user_id = await extract_user(message)
-    Man = await message.reply("💈 `Processing...`")
+    Man = await message.reply("`Processing...`")
     if not user_id:
         return await Man.edit(
             "**Berikan userid/username/reply untuk mendapatkan info pengguna tersebut.**"
@@ -182,7 +182,7 @@ async def who_is(client: Client, message: Message):
     & filters.me
 )
 async def chatinfo_handler(client: Client, message: Message):
-    Man = await message.reply("💈 `Processing...`")
+    Man = await message.reply("`Processing...`")
     try:
         if len(message.command) > 1:
             chat_u = message.command[1]
