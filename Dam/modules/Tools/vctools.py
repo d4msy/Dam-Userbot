@@ -49,13 +49,13 @@ async def get_group_call(
 @Client.on_message(filters.command(["startvc"], [".", "-", "^", "!", "?"]) & filters.me)
 async def opengc(client: Client, message: Message):
     flags = " ".join(message.command[1:])
-    Man = await message.reply("♻️ `Processing...`")
+    Man = await message.reply("`Processing...`")
     vctitle = get_arg(message)
     if flags == enums.ChatType.CHANNEL:
         chat_id = message.chat.title
     else:
         chat_id = message.chat.id
-    args = f"☑️ **Started voicechat in** **Chat ID**: `{chat_id}`"
+    args = f"• **Started Voicechat in** **Chat ID**: `{chat_id}`"
     try:
         if not vctitle:
             await client.invoke(
@@ -100,16 +100,16 @@ async def end_vc_(client: Client, message: Message):
 async def joinvc(client: Client, message: Message):
     chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
     if message.from_user.id != client.me.id:
-        Man = await message.reply("♻️ `Processing...`")
+        Man = await message.reply("`Processing...`")
     else:
-        Man = await message.reply("♻️ `Processing...`")
+        Man = await message.reply("`Processing...`")
     with suppress(ValueError):
         chat_id = int(chat_id)
     try:
         await client.group_call.start(chat_id)
     except Exception as e:
         return await Man.edit(f"**ERROR:** `{e}`")
-    await Man.edit(f"☑️ **Joined to Voicechat**\n└ **Chat ID:** `{chat_id}`")
+    await Man.edit(f"• **Joined Voicechat in** `{chat_id}`")
     await sleep(5)
     await client.group_call.set_is_mute(True)
 
@@ -121,18 +121,18 @@ async def joinvc(client: Client, message: Message):
 async def leavevc(client: Client, message: Message):
     chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
     if message.from_user.id != client.me.id:
-        Man = await message.reply("♻️ `Processing...`")
+        Man = await message.reply("`Processing...`")
     else:
-        Man = await message.reply("♻️ `Processing...`")
+        Man = await message.reply("`Processing...`")
     with suppress(ValueError):
         chat_id = int(chat_id)
     try:
         await client.group_call.stop()
     except Exception as e:
         return await edit_or_reply(message, f"**ERROR:** `{e}`")
-    msg = "☑️ **Leaved to Voicechat**"
+    msg = "• **Leave Voicechat in**"
     if chat_id:
-        msg += f"\n└ **Chat ID:** `{chat_id}`"
+        msg += f"`{chat_id}`"
     await Man.edit(msg)
 
 
