@@ -132,7 +132,7 @@ async def leavevc(client: Client, message: Message):
         return await edit_or_reply(message, f"**ERROR:** `{e}`")
     msg = "• **Leave Voicechat in**"
     if chat_id:
-        msg += f"`{chat_id}`"
+        msg += f" `{chat_id}`"
     await Man.edit(msg)
 
 
