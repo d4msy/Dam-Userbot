@@ -87,7 +87,9 @@ async def get_id(client: Client, message: Message):
 
     if user_id:
         if rep.forward_from:
-            user_detail = f"**Forwarded User ID:** `{message.reply_to_message.forward_from.id}`\n"
+            user_detail = (
+                f"**Forwarded User ID:** `{message.reply_to_message.forward_from.id}`\n"
+            )
         else:
             user_detail = (
                 f"**From User ID:** `{message.reply_to_message.from_user.id}`\n"
@@ -96,7 +98,9 @@ async def get_id(client: Client, message: Message):
         await message.reply(user_detail)
     elif file_id:
         if rep.forward_from:
-            user_detail = f"**Forwarded User ID:** `{message.reply_to_message.forward_from.id}`\n"
+            user_detail = (
+                f"**Forwarded User ID:** `{message.reply_to_message.forward_from.id}`\n"
+            )
         else:
             user_detail = (
                 f"**From User ID:** `{message.reply_to_message.from_user.id}`\n"
