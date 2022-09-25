@@ -17,10 +17,10 @@ from Dam.helpers.misc import create_botlog, git, heroku
 
 MSG_ON = """
 ┌| **Dam-Ubot Berhasil Di Aktifkan.** |┘
-━━━━━━━━━━━━━━━━━━━━━━━━
+━━
 ◈ **🤖 Userbot Version -** `{}`
 ◈ **Ketik** `.alive` **Untuk Mengecheck Bot.**
-━━━━━━━━━━━━━━━━━━━━━━━━
+━━
 """
 
 
