@@ -129,7 +129,7 @@ async def create_botlog(client):
     if HAPP is None:
         return
     LOGGER("Dam").info("TUNGGU SEBENTAR. SEDANG MEMBUAT GROUP LOG USERBOT UNTUK ANDA")
-    desc = "Group Log untuk Dam-Ubot.\n\nHARAP JANGAN KELUAR DARI GROUP INI.\n\n⚡ Powered By ~ @damprivateroom ⚡"
+    desc = "Group Log untuk Dam-Ubot.\n\nHARAP JANGAN KELUAR DARI GROUP INI.\n\n⚡ Powered By ~ @damprivateroom"
     try:
         gruplog = await client.create_supergroup("⚡ Dam-Logs ⚡", desc)
         if await in_heroku():
@@ -140,5 +140,5 @@ async def create_botlog(client):
             dotenv.set_key(path, "BOTLOG_CHATID", gruplog.id)
     except Exception:
         LOGGER("Dam").warning(
-            "var BOTLOG_CHATID kamu belum di isi. Buatlah grup telegram dan masukan bot @GreyDam_bot lalu ketik /id Masukan id grup nya di var BOTLOG_CHATID"
+            "var BOTLOG_CHATID kamu belum di isi. Buatlah grup telegram dan masukan bot @zetsuXrobot lalu ketik /id Masukan id grup nya di var BOTLOG_CHATID"
         )
