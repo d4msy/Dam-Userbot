@@ -38,7 +38,7 @@ async def module_help(client: Client, message: Message):
             "✨ 𝗙𝘂𝗻: -⋟ `asupan` -⋟ `animasi` -⋟ `fakeaction` -⋟ `salam` -⋟ `toxic` \n\n"
         )
         text += "🧰 𝗢𝘁𝗵𝗲𝗿: -⋟ `admins` -⋟ `afk` -⋟ `globals` -⋟ `groups` -⋟ `google` -⋟ `join` -⋟ `logs` -⋟ `misc` -⋟ `nulis` -⋟ `spam` -⋟ `sticker` -⋟ `sosmed` -⋟ `pmpermit` -⋟ `youtube` \n\n\n"
-        text += "📮 𝗣𝗿𝗲𝗳𝗶𝘅 -⋟ `[. - ^ ! ?]`\n"
+        text += "📮 𝗣𝗿𝗲𝗳𝗶𝘅: -⋟ `[. - ^ ! ?]`\n"
         text += "     `.help [module_name]`\n"
 
         await message.reply_photo(
@@ -49,7 +49,7 @@ async def module_help(client: Client, message: Message):
     if help_arg:
         if help_arg in CMD_HELP:
             commands: dict = CMD_HELP[help_arg]
-            this_command = "**❓ Help for Modules**\n\n"
+            this_command = "**❓ Bantuan Untuk Modul**\n\n"
             this_command += heading.format(str(help_arg)).upper()
 
             for x in commands:
