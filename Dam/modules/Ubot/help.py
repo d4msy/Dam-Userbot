@@ -7,7 +7,7 @@ from Dam.helpers.utility import split_list
 
 heading = "──「 **{0}** 」──\n"
 
-HELP_LOGO = "https://telegra.ph/file/f2d2cf18df7f2a8ab9729.jpg"
+HELP_LOGO = "https://telegra.ph/file/2e9c0740fd54161ff86d9.jpg"
 
 
 @Client.on_message(filters.command("help", [".", "-", "^", "!", "?"]) & filters.me)
