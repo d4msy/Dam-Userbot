@@ -21,7 +21,7 @@ async def module_help(client: Client, message: Message):
         help_arg = message.reply_to_message.text
     elif not message.reply_to_message and len(cmd) == 1:
         all_commands = ""
-        all_commands += "Silakan tentukan modul mana yang Anda inginkan bantuannya!\nPenggunaan -≽ `.help [module_name]`\n\n"
+        all_commands += "**Please specify which module you want help**!\n**Usage** -≽ `.help [module_name]`\n\n"
 
         ac = PrettyTable()
         ac.header = False
@@ -49,7 +49,7 @@ async def module_help(client: Client, message: Message):
     if help_arg:
         if help_arg in CMD_HELP:
             commands: dict = CMD_HELP[help_arg]
-            this_command = "**❓ Bantuan Untuk Modul**\n\n"
+            this_command = "❓ **Help For Modules**\n\n"
             this_command += heading.format(str(help_arg)).upper()
 
             for x in commands:
