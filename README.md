@@ -20,7 +20,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan userbot ini dengan bijak
 
 ## ᴅᴇᴘʟᴏʏ :
 
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/damsyx/Dam-Userbot/tree/main"> <img 
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/d4msy/Dam-Userbot/tree/main"> <img 
 src="https://img.shields.io/badge/Deploy%20To%20Heroku-purple?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
 
 <p align="center"><a href="https://t.me/ZetsuStringBot"><img src="https://img.shields.io/badge/Generate%20String%20Session-blue?style=for-the-flat&logo=telegram" width="210" height"34.45" /</a></p>
