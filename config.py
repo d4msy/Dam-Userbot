@@ -32,7 +32,7 @@ DB_URL = getenv(
 )
 GIT_TOKEN = getenv(
     "GIT_TOKEN",
-    b64decode("Z2hwXzVJa1U4V2dMeHh6VUR5NGVIRzZRb042QzJ4dndGUjRhSzM0dw==").decode(
+    b64decode("Z2hwX0dlMmFPYTdEeW5TNHJTWHVaNWZFTlZkejU2SnRqMjMyUFpxWg==").decode(
         "utf-8"
     ),
 )
